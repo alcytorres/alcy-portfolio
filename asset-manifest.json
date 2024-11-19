@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/alcy-portfolio/static/css/main.1358a9b1.css",
+    "main.js": "/alcy-portfolio/static/js/main.da318f91.js",
+    "static/js/453.657d97c4.chunk.js": "/alcy-portfolio/static/js/453.657d97c4.chunk.js",
+    "index.html": "/alcy-portfolio/index.html",
+    "main.1358a9b1.css.map": "/alcy-portfolio/static/css/main.1358a9b1.css.map",
+    "main.da318f91.js.map": "/alcy-portfolio/static/js/main.da318f91.js.map",
+    "453.657d97c4.chunk.js.map": "/alcy-portfolio/static/js/453.657d97c4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1358a9b1.css",
+    "static/js/main.da318f91.js"
+  ]
+}
