@@ -7,6 +7,32 @@
   pointer-events: none;
 }
 
+/* Ensure the app container spans the full content height */
+.app-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* NEW: Ensure full viewport coverage */
+  overflow-x: hidden;
+  background: none; /* REMOVE: Conflicting background styles */
+}
+
+/* NEW: Section styles to ensure proper spacing */
+section {
+  min-height: 100vh; /* NEW: Each section takes at least the full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Ensure content layers on top of the background */
+.content-container {
+  position: relative;
+  z-index: 1;
+  padding: 20px; /* Optional: Add spacing for better visuals */
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -36,3 +62,6 @@
     transform: rotate(360deg);
   }
 }
+
+
+
