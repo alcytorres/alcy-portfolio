@@ -5,7 +5,7 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 function Intro() {
   return (
-    <section id="intro" className="min-h-screen flex flex-col md:flex-row justify-center items-center">
+    <section id="home" className="min-h-screen flex flex-col md:flex-row justify-center items-center">
       {/* Profile Picture */}
         <div className="w-64 h-64 rounded-full overflow-hidden"> {/* NEW: Increased size */}
           <img

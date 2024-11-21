@@ -1,41 +1,61 @@
 import React, { useState } from 'react';
+import './Navbar.css'; // NEW: Import the CSS file
+import logo from '../assets/alcy-logo.png'; // NEW: Import the logo
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 right-0 p-4 z-50">
-      {/* Hamburger Menu Icon */}
-      <div
-        className="w-8 h-8 text-white cursor-pointer"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {/* Hamburger Icon */}
-        <div className="space-y-2">
-          <span className="block w-8 h-0.5 bg-white"></span>
-          <span className="block w-8 h-0.5 bg-white"></span>
-          <span className="block w-8 h-0.5 bg-white"></span>
-        </div>
+    <nav className="navbar">
+      {/* NEW: Logo */}
+      <div className="logo-container"> {/* NEW */}
+        <img src={logo} alt="Alcy Logo" className="logo" /> {/* NEW */}
       </div>
+
+      {/* Menu Button */}
+      {!isOpen && (
+        <div
+          className="menu-button"
+          onClick={() => setIsOpen(true)}
+        >
+          Menu
+        </div>
+      )}
 
       {/* Navigation Menu */}
       {isOpen && (
-        <div className="absolute top-16 right-4 bg-gray-800 rounded shadow-lg">
-          <ul className="text-white">
-            <li className="px-4 py-2 hover:bg-gray-700">
-              <a href="#about" onClick={() => setIsOpen(false)}>
+        <div className="menu-overlay">
+          {/* Close Button */}
+          <div
+            className="close-button"
+            onClick={() => setIsOpen(false)}
+          >
+            Close
+          </div>
+          <ul className="menu-list">
+            <li className="menu-item">
+              <a href="#home" className="menu-link" onClick={() => setIsOpen(false)}>
+                Home
+              </a>
+              <span className="menu-description">Back to the home page.</span>
+            </li>
+            <li className="menu-item">
+              <a href="#about" className="menu-link" onClick={() => setIsOpen(false)}>
                 About
               </a>
+              <span className="menu-description">A little about me and my background.</span>
             </li>
-            <li className="px-4 py-2 hover:bg-gray-700">
-              <a href="#projects" onClick={() => setIsOpen(false)}>
+            <li className="menu-item">
+              <a href="#projects" className="menu-link" onClick={() => setIsOpen(false)}>
                 Projects
               </a>
+              <span className="menu-description">A showcase of my work.</span>
             </li>
-            <li className="px-4 py-2 hover:bg-gray-700">
-              <a href="#contact" onClick={() => setIsOpen(false)}>
+            <li className="menu-item">
+              <a href="#contact" className="menu-link" onClick={() => setIsOpen(false)}>
                 Contact
               </a>
+              <span className="menu-description">Get in touch.</span>
             </li>
           </ul>
         </div>

@@ -1,0 +1,119 @@
+/* Navbar container */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  z-index: 50;
+  width: 100%;
+  display: flex;
+  align-items: center; /* Align logo and menu button */
+  justify-content: space-between; /* Space between logo and menu button */
+}
+
+/* NEW: Logo Container */
+.logo-container {
+  position: absolute; /* Ensure it stays at the top-left */
+  top: 1rem;
+  left: 1rem;
+}
+
+/* NEW: Logo */
+.logo {
+  width: 70px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Menu Button */
+.menu-button {
+  color: white;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+
+  /* NEW: Adjusted position to move inward */
+  position: absolute;
+  top: 2rem; /* NEW: Moved downward */
+  right: 2rem; /* NEW: Moved inward horizontally */
+
+  /* NEW: Increased size for better visibility */
+  font-size: 1.5rem;
+}
+
+.menu-button:hover {
+  transform: scale(1.1); /* Slightly larger hover effect for emphasis */
+}
+/* Menu Overlay */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(31, 41, 55, 0.95); /* Gray 800 with opacity */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+/* Close Button */
+.close-button {
+  color: white;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+
+  /* NEW: Adjusted position to match Menu Button */
+  position: absolute;
+  top: 2rem; /* NEW */
+  right: 2rem; /* NEW */
+
+  /* NEW: Increased size for consistency */
+  font-size: 1.5rem;
+}
+
+.close-button:hover {
+  transform: scale(1.1);
+}
+
+/* Menu List */
+.menu-list {
+  margin-top: 4rem;
+  font-size: 3rem;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  gap: 4rem; /* Space between menu items */
+}
+
+/* Menu Item */
+.menu-item {
+  display: flex;
+  align-items: baseline;
+  gap: 12rem;
+  padding-left: 1rem;
+  margin-top: 50px;
+  transition: color 0.2s ease-in-out;
+  position: relative;
+}
+
+.menu-item:hover .menu-link {
+  color: white;
+}
+
+.menu-item:hover {
+  background-color: rgba(31, 41, 55, 0.8);
+  border-radius: 8px;
+}
+
+/* Menu Link */
+.menu-link {
+  font-size: 3rem;
+  color: #6B7280;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.menu-description {
+  font-size: 1.25rem;
+  color: #6B7280;
+  pointer-events: none;
+}
