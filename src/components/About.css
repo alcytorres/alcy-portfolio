@@ -1,59 +1,88 @@
 /* About Section */
 .about-section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #1f2b6c;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 300px;
 }
 
-@media (min-width: 768px) {
-  .about-section {
-    flex-direction: row; /* Adjust layout for larger screens */
-  }
-}
-
-/* About Text Container */
-.about-text-container {
-  max-width: 40rem; /* Same as the original max-w-xl */
-  padding: 1rem; /* Same as px-4 */
-  margin-right: 250px; 
-}
-
-/* About Heading */
-.about-heading {
-  font-size: 4.5rem; /* Same as text-4xl */
-  font-weight: bold; /* Keeps the bold styling */
-  margin-bottom: 1rem; /* Same as mb-4 */
-  color: #1f2b6c; /* Replaces text-custom-text */
+/* About Header */
+.about-header {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 /* About Text */
 .about-text {
-  color: #1f2b6c; /* Replaces text-custom-text */
-  line-height: 1.6; /* Improves readability */
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  max-height: 5.5rem; /* Restricts the visible height for collapsed state */
+  transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
-/* Read More Button */
-.read-more-button {
-  margin-top: 1rem; /* Same as mt-4 */
-  width: 3rem; /* Same as w-12 */
-  height: 3rem; /* Same as h-12 */
-  border-radius: 50%; /* Keeps the circular button */
-  background-color: #1f2b6c; 
-  color: #fff; /* White text */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.about-text.expanded {
+  max-height: 20rem; /* Expands to fit additional content */
+  opacity: 1;
+}
+
+/* Additional Text */
+.additional-text {
+  display: inline;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about-text.expanded .additional-text {
+  opacity: 1; /* Fades in additional content when expanded */
+}
+
+/* Read More Link */
+.read-more-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #6b7280;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border: none;
+  background: transparent;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth transition for hover */
+  position: relative;
 }
 
-.read-more-button:hover {
-  background-color: #005582; /* Matches blue-600 */
+.read-more-link::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #6b7280;
+  transition: width 0.3s ease-in-out;
 }
 
-/* Read More Symbol */
-.read-more-symbol {
-  font-size: 1.25rem; /* Same as text-xl */
+.read-more-link:hover::after {
+  width: 120%; /* Subtle underline expansion effect */
+}
+
+.read-more-link:hover {
+  color: #1f2937; /* Darker color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-header {
+    font-size: 3rem;
+  }
+
+  .about-text {
+    font-size: 1.2rem;
+  }
+
+  .read-more-link {
+    font-size: 1rem;
+  }
 }

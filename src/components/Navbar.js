@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import './Navbar.css'; // NEW: Import the CSS file
-import logo from '../assets/alcy-logo.png'; // NEW: Import the logo
+import './Navbar.css'; // Import the CSS file
+import logo from '../assets/alcy-logo.png'; // Import the logo
 
-// NEW: Import the email icon
-import { FaEnvelope } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa'; // Email icon
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,16 +21,16 @@ function Navbar() {
 
       {/* Menu Button */}
       <div
-        className={`menu-button ${isOpen ? 'menu-open' : ''}`} // NEW: Added conditional class
-        onClick={() => setIsOpen(!isOpen)} // Toggle the menu
+        className={`menu-button ${isOpen ? 'menu-open' : ''}`}
+        onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? 'Close' : 'Menu'}
       </div>
 
-       {/* NEW: Get in Touch Button */}
-       <div className="get-in-touch">
+      {/* Get in Touch Button */}
+      <div className="get-in-touch">
         <a href="mailto:alcy.atorres@gmail.com" className="get-in-touch-link">
-          <FaEnvelope className="get-in-touch-icon" /> {/* NEW: Email icon */}
+          <FaEnvelope className="get-in-touch-icon" />
           Get in Touch
         </a>
       </div>
@@ -40,29 +39,29 @@ function Navbar() {
       {isOpen && (
         <div className="menu-overlay">
           <ul className="menu-list">
-            <li className="menu-item">
+            <li className="menu-item home-item">
               <a href="#home" className="menu-link" onClick={() => setIsOpen(false)}>
                 Home
               </a>
-              <span className="menu-description">Back to the home page.</span>
+              <span className="menu-description home-description">Back to the home page.</span>
             </li>
-            <li className="menu-item">
+            <li className="menu-item about-item">
               <a href="#about" className="menu-link" onClick={() => setIsOpen(false)}>
                 About
               </a>
-              <span className="menu-description">A little about me and my background.</span>
+              <span className="menu-description about-description">A little about me and my background.</span>
             </li>
-            <li className="menu-item">
+            <li className="menu-item projects-item">
               <a href="#projects" className="menu-link" onClick={() => setIsOpen(false)}>
                 Projects
               </a>
-              <span className="menu-description">A showcase of my work.</span>
+              <span className="menu-description projects-description">A showcase of my work.</span>
             </li>
-            <li className="menu-item">
+            <li className="menu-item contact-item">
               <a href="#contact" className="menu-link" onClick={() => setIsOpen(false)}>
                 Contact
               </a>
-              <span className="menu-description">Get in touch.</span>
+              <span className="menu-description contact-description">Get in touch.</span>
             </li>
           </ul>
         </div>

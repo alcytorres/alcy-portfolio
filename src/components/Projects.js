@@ -10,7 +10,7 @@ function Projects() {
       video: 'https://www.youtube.com/embed/placeholder_link',
     },
     {
-      title: 'Travel Log Tracker',
+      title: 'Travel Log',
       description: 'An app to log and share your travel experiences.',
       image: '/images/travel-log.png',
       video: null, // REMOVE: Placeholder video for this project
