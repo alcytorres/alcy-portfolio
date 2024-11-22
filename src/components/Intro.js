@@ -12,7 +12,7 @@ function Intro() {
           name is <span className="highlighted-text">Alcy</span>.
         </h1>
         <p className="intro-subheading">
-          I'm a <span className="highlighted-text">web developer</span> that bring ideas to life from the Greater Boston area.
+          I'm a <span className="highlighted-text">web developer</span> that brings ideas to life from the Greater Boston area.
         </p>
 
         {/* Social Media Icons */}

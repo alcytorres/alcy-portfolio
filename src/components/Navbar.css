@@ -8,17 +8,17 @@
   display: flex;
   align-items: center;
   padding: 1rem;
-  background-color: #f4f9fc; /* Match the website background color */
+  background-color: #f4f9fc;
 }
 
 /* Logo Container */
 .logo-container {
   margin-right: 1rem;
-  z-index: 102; /* NEW: Ensures logo stays visible above the menu overlay */
+  z-index: 102;
 }
 
 .logo {
-  width: 40px;
+  width: 60px;
   height: auto;
   object-fit: contain;
   cursor: pointer;
@@ -33,9 +33,9 @@
 .vertical-line {
   width: 1px;
   height: 40px;
-  background-color: #d3d3d3;
+  background-color: #8d95b6;
   margin-right: 1rem;
-  z-index: 102; /* NEW: Ensures line stays visible above the menu overlay */
+  z-index: 102;
 }
 
 /* Menu Button */
@@ -44,7 +44,7 @@
   cursor: pointer;
   font-size: 1.5rem;
   transition: transform 0.2s ease-in-out;
-  z-index: 102; /* NEW: Ensures button stays visible above the menu overlay */
+  z-index: 102;
 }
 
 .menu-button:hover {
@@ -55,18 +55,18 @@
 .menu-overlay {
   position: fixed;
   inset: 0;
-  background: #aadcec; /* Updated background color */
+  background: #aadcec;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 2rem;
   overflow-y: auto;
-  z-index: 100; /* Lower than logo and menu button */
+  z-index: 100;
 }
 
 /* Menu List */
 .menu-list {
-  margin-top: 4rem;
+  margin-top: 8rem;
   font-size: 3rem;
   list-style: none;
   padding: 0;
@@ -74,7 +74,7 @@
   gap: 4rem;
 }
 
-/* Menu Item */
+/* Menu Items */
 .menu-item {
   display: flex;
   align-items: baseline;
@@ -83,56 +83,74 @@
   margin-top: 50px;
   transition: color 0.2s ease-in-out;
   position: relative;
+
+  /* NEW: Initial animation state */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease-out forwards;
 }
 
-.menu-item:hover .menu-link {
-  color: white;
+/* NEW: Staggered animation delays */
+.menu-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.menu-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.menu-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.menu-item:nth-child(4) {
+  animation-delay: 0.8s;
 }
 
-.menu-item:hover {
-  background-color: rgba(31, 41, 55, 0.8);
-  border-radius: 8px;
-}
-
-/* Menu Link */
+/* Menu Links */
 .menu-link {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #0f1b61;
+  font-family: 'Georgia';
   text-decoration: none;
+  font-weight: bold;
   transition: color 0.2s ease-in-out;
 }
 
-.menu-description {
-  font-size: 1.25rem;
-  color: #0f1b61;
-  pointer-events: none;
-  align-self: flex-start;
-  margin-top: 28px;
-}
-
-/* Hover Effects */
-.menu-item:hover .menu-link {
+.menu-link:hover {
   color: white;
 }
 
-.menu-item:hover {
-  background-color: rgba(31, 41, 55, 0.8);
-  border-radius: 8px;
+/* Menu Descriptions */
+.menu-description {
+  font-size: 1.2rem;
+  color: #0f1b61;
+  pointer-events: none;
+  align-self: flex-start;
+  margin-top: 23px;
 }
 
+/* NEW: Keyframe for the staggered animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-/* NEW: Get in Touch Button Styles */
+/* Get in Touch Button */
 .get-in-touch {
   position: absolute;
   top: 1rem;
-  right: 1rem; /* Position at the top right */
-  z-index: 102; /* Ensure it stays above the menu overlay */
+  right: 1rem;
+  z-index: 102;
 }
 
 .get-in-touch-link {
   display: flex;
   align-items: center;
-  color: #1f2b6c; /* Match your color scheme */
+  color: #1f2b6c;
   text-decoration: none;
   font-size: 1.5rem;
   transition: transform 0.2s ease-in-out;

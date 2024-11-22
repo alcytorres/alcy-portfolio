@@ -1,23 +1,23 @@
 /* Intro Section */
 .intro-section {
   display: flex;
-  align-items: center; /* Vertically centers content */
-  justify-content: center; /* Horizontally centers content */
-  min-height: 100vh; /* Full screen height */
-  gap: 2rem; /* Space between the text and the picture */
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 2rem;
   padding: 2rem;
-  flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+  flex-wrap: wrap;
   position: relative;
   z-index: 10;
 }
 
 .intro-section .intro-heading {
-  color: #1f2b6c
+  color: #1f2b6c;
 }
 
 .intro-section .intro-subheading {
   font-size: 25px;
-  color: #1f2b6c
+  color: #1f2b6c;
 }
 
 /* Profile Picture Container */
@@ -25,7 +25,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0; /* Prevent shrinking of the image */
+  flex-shrink: 0;
 }
 
 .profile-picture {
@@ -45,7 +45,7 @@
 /* Introductory Text Container */
 .intro-text-container {
   max-width: 40rem;
-  text-align: left; /* Align text to the left */
+  text-align: left;
 }
 
 .intro-heading {
@@ -69,40 +69,52 @@
 /* Social Media Icons */
 .social-media-icons {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem; /* Space between icons */
 }
 
 .social-icon {
-  font-size: 3rem;
-  color: #0073b1;
-  transition: color 0.3s ease;
+  font-size: 3.5rem; /* Icon size */
+  color: #ffffff; /* Icon color */
+  width: 5rem; /* Button size */
+  height: 5rem; /* Button size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #abdbeb; /* Default light blue background */
+  border: 4px solid #9131e5; /* Purple border */
+  border-radius: 12px; /* Rounded corners for modern UI */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease; /* Smooth hover transitions */
 }
 
 .social-icon:hover {
-  color: #005582;
+  transform: scale(1.15); /* Slight scaling effect on hover */
+  background: linear-gradient(145deg, #8ab7c7, #99c8d5); /* NEW: Darker gradient for hover */
+  border-color: #7a2dc9; /* NEW: Darker purple border on hover */
 }
+
 
 /* NEW: Scroll Indicator Container */
 .scroll-indicator-container {
   position: absolute;
-  bottom: -300px; /* Place it below the profile picture */
-  left: 33%; /* Center it horizontally */
+  bottom: -300px;
+  left: 33%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Poppins', 'Montserrat', sans-serif; /* Keeps a close match font */
+  font-family: 'Poppins', 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 10px;
-  letter-spacing: 0.3em;
-  color: #b0b0b0; /* Light gray color */
+  letter-spacing: 0.4em;
+  color: #b0b0b0;
   text-transform: uppercase;
   z-index: 30;
 }
 
 .scroll-text {
-  font-size: 1.2rem;
-  color: #babfbf;
+  font-size: 15px;
+  color: #8d95b6;
   margin-bottom: 8px;
 }
 
@@ -115,11 +127,11 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .intro-section {
-    flex-direction: column; /* Stack the text and picture vertically */
+    flex-direction: column;
     text-align: center;
   }
 
   .intro-text-container {
-    text-align: center; /* Center-align text on smaller screens */
+    text-align: center;
   }
 }
