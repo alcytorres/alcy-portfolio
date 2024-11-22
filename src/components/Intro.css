@@ -1,0 +1,48 @@
+/* intro.css */
+
+/* Intro Section */
+.intro-section {
+  position: relative;
+  z-index: 10;
+  overflow: visible; /* Ensure overflow content is visible */
+}
+
+/* Profile Picture Container */
+.profile-picture-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 20;
+}
+
+/* Scroll Indicator */
+.scroll-indicator-container {
+  position: absolute;
+  bottom: -300px; /* Place it below the profile picture */
+  left: 33%; /* Center it horizontally */
+  transform: translateX(-50%); /* Align to the center */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', 'Montserrat', sans-serif; /* Keeps a close match font */
+  font-weight: 300; /* Thin appearance */
+  font-size: 10px; /* UPDATED: Further reduced font size for smaller text */
+  letter-spacing: 0.3em; /* UPDATED: Keeps letters widely spaced for smaller text */
+  color: #B0B0B0; /* Light gray color */
+  text-transform: uppercase; /* Ensure all letters are capitalized */
+  z-index: 30;
+}
+
+/* Scroll Text */
+.scroll-text {
+  font-size: 1.2rem; /* Adjust size for better visibility */
+  color: #babfbf;
+  margin-bottom: 8px;
+}
+
+/* Scroll Line */
+.scroll-line {
+  width: 1px;
+  height: 400px; /* Adjust height as needed */
+  background-color: #8d95b6;
+}
