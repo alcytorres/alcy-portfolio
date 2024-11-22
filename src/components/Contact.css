@@ -1,0 +1,41 @@
+/* Contact Section */
+.contact-section {
+  min-height: 100vh; /* Ensure full-screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem; /* Add padding for spacing */
+  background-color: #f9f9f9; /* Optional: Adjust as needed */
+}
+
+/* Contact Heading */
+.contact-heading {
+  font-size: 2.5rem; /* Same as text-4xl */
+  font-weight: bold; /* Matches font-bold */
+  margin-bottom: 1rem; /* Same as mb-4 */
+  color: #1f2b6c;
+  text-align: center;
+}
+
+/* Contact Description */
+.contact-description {
+  color: #1f2b6c;
+  text-align: center;
+  max-width: 40rem; /* Same as max-w-xl */
+  padding: 1rem; /* Same as px-4 */
+  margin-bottom: 1rem; /* Same as mb-4 */
+  line-height: 1.6; /* Improves readability */
+}
+
+/* Contact Email Link */
+.contact-email {
+  font-size: 1.25rem; /* Same as text-xl */
+  color: #1f2b6c;
+  text-decoration: none; /* Removes underline */
+  transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+.contact-email:hover {
+  color: #005582; /* Slightly darker blue for hover effect */
+}

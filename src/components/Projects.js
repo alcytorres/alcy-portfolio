@@ -1,4 +1,5 @@
 import React from 'react';
+import './Projects.css'; // NEW: Import the CSS file for styling
 
 function Projects() {
   const projectList = [
@@ -12,35 +13,43 @@ function Projects() {
       title: 'Travel Log Tracker',
       description: 'An app to log and share your travel experiences.',
       image: '/images/travel-log.png',
-      video: 'https://www.youtube.com/embed/placeholder_link',
+      video: null, // REMOVE: Placeholder video for this project
+    },
+    {
+      title: 'Health Tracker', // NEW
+      description: 'Coming Soon in 2025.', // NEW
+      image: null, // No image for this project yet
+      video: null, // No video for this project
     },
   ];
 
   return (
-    <section id="projects" className="min-h-screen flex flex-col items-center">
-      <h2 className="text-4xl font-bold my-8 text-custom-text">Projects</h2> {/* NEW: Consistent text color */}
+    <section id="projects" className="projects-section">
+      <h2 className="projects-heading">Projects</h2>
       {projectList.map((project, index) => (
-        <div
-          key={index}
-          className="mb-12 w-full px-4 flex flex-col items-center"
-        >
-          <h3 className="text-2xl font-semibold text-custom-text mb-2">{project.title}</h3> {/* NEW */}
-          <p className="text-custom-text text-center mb-4 max-w-2xl">{project.description}</p> {/* NEW */}
-          <img
-            src={project.image}
-            alt={project.title}
-            className="mb-4 w-full max-w-md"
-          />
-          <div className="w-full max-w-md">
-            <iframe
-              width="100%"
-              height="315"
-              src={project.video}
-              title={project.title}
-              frameBorder="0"
-              allowFullScreen
-            ></iframe>
-          </div>
+        <div key={index} className="project-card">
+          <h3 className="project-title">{project.title}</h3>
+          <p className="project-description">{project.description}</p>
+          {project.image && (
+            <img
+              src={project.image}
+              alt={project.title}
+              className="project-image"
+            />
+          )}
+          {project.video && (
+            <div className="project-video">
+              <iframe
+                src={project.video}
+                title={project.title}
+                frameBorder="0"
+                allowFullScreen
+              ></iframe>
+            </div>
+          )}
+          {index < projectList.length - 1 && ( // NEW: Add horizontal line between projects
+            <hr className="project-separator" />
+          )}
         </div>
       ))}
     </section>

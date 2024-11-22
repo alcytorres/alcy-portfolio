@@ -1,0 +1,59 @@
+/* About Section */
+.about-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .about-section {
+    flex-direction: row; /* Adjust layout for larger screens */
+  }
+}
+
+/* About Text Container */
+.about-text-container {
+  max-width: 40rem; /* Same as the original max-w-xl */
+  padding: 1rem; /* Same as px-4 */
+  margin-right: 250px; 
+}
+
+/* About Heading */
+.about-heading {
+  font-size: 4.5rem; /* Same as text-4xl */
+  font-weight: bold; /* Keeps the bold styling */
+  margin-bottom: 1rem; /* Same as mb-4 */
+  color: #1f2b6c; /* Replaces text-custom-text */
+}
+
+/* About Text */
+.about-text {
+  color: #1f2b6c; /* Replaces text-custom-text */
+  line-height: 1.6; /* Improves readability */
+}
+
+/* Read More Button */
+.read-more-button {
+  margin-top: 1rem; /* Same as mt-4 */
+  width: 3rem; /* Same as w-12 */
+  height: 3rem; /* Same as h-12 */
+  border-radius: 50%; /* Keeps the circular button */
+  background-color: #1f2b6c; 
+  color: #fff; /* White text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.read-more-button:hover {
+  background-color: #005582; /* Matches blue-600 */
+}
+
+/* Read More Symbol */
+.read-more-symbol {
+  font-size: 1.25rem; /* Same as text-xl */
+}

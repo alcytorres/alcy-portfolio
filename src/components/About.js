@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
+import './About.css'; // NEW: Import CSS file
 
 function About() {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <section id="about" className="min-h-screen flex flex-col md:flex-row justify-center items-center">
+    <section id="about" className="about-section">
       {/* About Me Text */}
-      <div className="max-w-xl px-4">
-        <h1 className="text-4xl font-bold mb-4 text-custom-text">About Me</h1> {/* NEW: Ensure consistent text color */}
-        <p className="text-custom-text">
+      <div className="about-text-container">
+        <h1 className="about-heading">About Me</h1>
+        <p className="about-text">
           I am a software engineer with a passion for developing innovative programs that expedite the efficiency and effectiveness of organizational success.
           {expanded && (
             <span>
@@ -19,9 +20,9 @@ function About() {
         {/* Read More Button */}
         <button
           onClick={() => setExpanded(!expanded)}
-          className="mt-4 w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center hover:bg-blue-600 transition duration-300"
+          className="read-more-button"
         >
-          <span className="text-xl">{expanded ? '-' : '+'}</span>
+          <span className="read-more-symbol">{expanded ? '-' : '+'}</span>
         </button>
       </div>
     </section>
