@@ -1,5 +1,4 @@
 import React from 'react';
-import Background from './components/Background';
 import Navbar from './components/Navbar';
 import Intro from './components/Intro';
 import About from './components/About';
@@ -9,10 +8,9 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="app-container"> {/* UPDATED: Ensure full height coverage */}
-      <Background /> {/* Background spans the entire content */}
+    <div className="app-container"> {/* Updated for margin */}
       <Navbar />
-      <div className="content-container"> {/* Content wrapper */}
+      <div className="content-container">
         <Intro />
         <About />
         <Projects />

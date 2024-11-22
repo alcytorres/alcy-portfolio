@@ -1,5 +1,3 @@
-// src/components/Projects.js
-
 import React from 'react';
 
 function Projects() {
@@ -20,14 +18,14 @@ function Projects() {
 
   return (
     <section id="projects" className="min-h-screen flex flex-col items-center">
-      <h2 className="text-4xl font-bold my-8 text-white">Projects</h2>
+      <h2 className="text-4xl font-bold my-8 text-custom-text">Projects</h2> {/* NEW: Consistent text color */}
       {projectList.map((project, index) => (
         <div
           key={index}
-          className="mb-12 w-full px-4 flex flex-col items-center" // NEW: Center alignment
+          className="mb-12 w-full px-4 flex flex-col items-center"
         >
-          <h3 className="text-2xl font-semibold text-white mb-2">{project.title}</h3>
-          <p className="text-white text-center mb-4 max-w-2xl">{project.description}</p>
+          <h3 className="text-2xl font-semibold text-custom-text mb-2">{project.title}</h3> {/* NEW */}
+          <p className="text-custom-text text-center mb-4 max-w-2xl">{project.description}</p> {/* NEW */}
           <img
             src={project.image}
             alt={project.title}

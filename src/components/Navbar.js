@@ -2,36 +2,43 @@ import React, { useState } from 'react';
 import './Navbar.css'; // NEW: Import the CSS file
 import logo from '../assets/alcy-logo.png'; // NEW: Import the logo
 
+// NEW: Import the email icon
+import { FaEnvelope } from 'react-icons/fa';
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="navbar">
-      {/* NEW: Logo */}
-      <div className="logo-container"> {/* NEW */}
-        <img src={logo} alt="Alcy Logo" className="logo" /> {/* NEW */}
+      {/* Logo */}
+      <div className="logo-container">
+        <a href="#home">
+          <img src={logo} alt="Alcy Logo" className="logo" />
+        </a>
       </div>
 
+      {/* Vertical Line */}
+      <div className="vertical-line"></div>
+
       {/* Menu Button */}
-      {!isOpen && (
-        <div
-          className="menu-button"
-          onClick={() => setIsOpen(true)}
-        >
-          Menu
-        </div>
-      )}
+      <div
+        className={`menu-button ${isOpen ? 'menu-open' : ''}`} // NEW: Added conditional class
+        onClick={() => setIsOpen(!isOpen)} // Toggle the menu
+      >
+        {isOpen ? 'Close' : 'Menu'}
+      </div>
+
+       {/* NEW: Get in Touch Button */}
+       <div className="get-in-touch">
+        <a href="mailto:alcy.atorres@gmail.com" className="get-in-touch-link">
+          <FaEnvelope className="get-in-touch-icon" /> {/* NEW: Email icon */}
+          Get in Touch
+        </a>
+      </div>
 
       {/* Navigation Menu */}
       {isOpen && (
         <div className="menu-overlay">
-          {/* Close Button */}
-          <div
-            className="close-button"
-            onClick={() => setIsOpen(false)}
-          >
-            Close
-          </div>
           <ul className="menu-list">
             <li className="menu-item">
               <a href="#home" className="menu-link" onClick={() => setIsOpen(false)}>

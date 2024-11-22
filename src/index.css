@@ -4,20 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html {
   scroll-behavior: smooth;
 }
-
-/* index.css */
 
 /* Ensure the body spans the full content height */
 body {
   margin: 0;
   padding: 0;
   width: 100%;
-  min-height: 100vh; /* UPDATED: Ensure the body matches content height */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  background: none; /* REMOVE: Any conflicting background styles */
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #f4f9fc; /* NEW: Set background color */
+  color: #1f2b6c; /* NEW: Set default text color */
 }
-

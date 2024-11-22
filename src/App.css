@@ -1,29 +1,11 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-/* Ensure the app container spans the full content height */
+/* App container */
 .app-container {
   position: relative;
   width: 100%;
-  min-height: 100vh; /* NEW: Ensure full viewport coverage */
-  overflow-x: hidden;
-  background: none; /* REMOVE: Conflicting background styles */
+  min-height: 100vh; /* Ensure full viewport coverage */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  background-color: #f4f9fc; /* NEW: Solid background color */
 }
-
-/* NEW: Section styles to ensure proper spacing */
-section {
-  min-height: 100vh; /* NEW: Each section takes at least the full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 
 /* Ensure content layers on top of the background */
 .content-container {
@@ -32,36 +14,73 @@ section {
   padding: 20px; /* Optional: Add spacing for better visuals */
 }
 
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Global Section Styles */
+section {
+  min-height: 100vh; /* Ensure each section takes at least the full viewport height */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* Typography */
+body {
+  font-family: 'Arial', sans-serif; /* Use a clean, readable font */
+  color: #1f2b6c; /* NEW: Set the default text color */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+  color: #1f2b6c; /* Ensure all headers use the new text color */
+}
+
+/* Links */
+a {
+  color: #1f2b6c; /* Default link color */
+  text-decoration: none; /* Remove underline by default */
+  transition: color 0.2s ease-in-out; /* Smooth color transition */
+}
+
+a:hover {
+  color: #0a1b3f; /* Darker shade for hover */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* Buttons */
+button {
+  background-color: #1f2b6c; /* Button background */
+  color: #f4f9fc; /* Button text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #0a1b3f; /* Darker shade on hover */
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  p {
+    font-size: 1rem; /* Adjust paragraph font size */
   }
 }
 
-
-
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
