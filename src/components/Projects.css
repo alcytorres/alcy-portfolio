@@ -1,0 +1,74 @@
+/* Projects Section */
+.projects-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f9f9f9; /* Optional: Adjust as needed */
+}
+
+/* Heading */
+.projects-heading {
+  font-size: 4.5rem; /* Same as text-4xl */
+  font-weight: bold;
+  margin: 2rem 0;
+  color: #1f2b6c; 
+  text-align: center;
+}
+
+/* Project Card */
+.project-card {
+  margin-bottom: 3rem; /* Same as mb-12 */
+  width: 100%;
+  padding: 1rem; /* Same as px-4 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Project Title */
+.project-title {
+  font-size: 1.5rem; /* Same as text-2xl */
+  font-weight: 600; /* Matches font-semibold */
+  color: #1f2b6c; 
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Project Description */
+.project-description {
+  color: #1f2b6c; 
+  text-align: center;
+  margin-bottom: 1rem;
+  max-width: 40rem; /* Same as max-w-2xl */
+  line-height: 1.6; /* Improves readability */
+}
+
+/* Project Image */
+.project-image {
+  margin-bottom: 1rem; /* Same as mb-4 */
+  width: 100%;
+  max-width: 30rem; /* Same as max-w-md */
+  border-radius: 0.5rem; /* Optional: Slightly rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add depth */
+}
+
+/* Project Video */
+.project-video {
+  width: 100%;
+  max-width: 30rem; /* Same as max-w-md */
+}
+
+.project-video iframe {
+  width: 100%;
+  height: 315px; /* Maintains aspect ratio */
+}
+
+/* NEW: Horizontal Line Separator */
+.project-separator {
+  width: 80%;
+  height: 1px;
+  background-color: #ddd; /* Light gray color */
+  margin: 2rem 0;
+}
