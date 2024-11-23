@@ -17,7 +17,7 @@ function Projects() {
     },
     {
       title: 'Health Tracker', // NEW
-      description: 'Coming Soon in 2025.', // NEW
+      description: 'Coming in 2025.', // NEW
       image: null, // No image for this project yet
       video: null, // No video for this project
     },

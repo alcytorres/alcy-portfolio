@@ -64,9 +64,6 @@
   transition: width 0.3s ease-in-out;
 }
 
-.read-more-link:hover::after {
-  width: 120%; /* Subtle underline expansion effect */
-}
 
 .read-more-link:hover {
   color: #1f2937; /* Darker color on hover */
