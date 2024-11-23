@@ -29,18 +29,20 @@
 }
 
 .profile-picture {
-  width: 16rem;
-  height: 16rem;
-  border-radius: 50%;
-  overflow: hidden;
+  width: 30rem; /* Profile picture size */
+  height: 30rem;
+  border-radius: 50%; /* Circle shape */
+  overflow: hidden; /* Ensures image stays within the circle */
 }
 
 .profile-picture-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  filter: grayscale(100%);
+  object-fit: cover; /* Ensures image fills the container */
+  transform: scale(1.7) translate(6%, 18%); /* NEW: Adjust for both rightward and downward movement */
+  filter: grayscale(100%); /* Keeps the grayscale effect */
 }
+
 
 /* Introductory Text Container */
 .intro-text-container {
