@@ -1,79 +1,170 @@
 /* Projects Section */
 .projects-section {
-  text-align: left; /* Align all text to the left */
+  text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 2rem 3rem; /* Updated padding for alignment and spacing */
+  padding: 2rem;
   background-color: #f4f9fc;
-  max-width: 1200px; /* UPDATED: Increase the section width for more words per line */
+  max-width: 1200px;
   margin: auto;
-  margin-top: 10px; /* Adjust spacing above */
-  margin-left: 340px; /* NEW: Slightly move section to the left */
 }
 
 /* Heading */
 .projects-heading {
-  font-size: 4.5rem; /* Same as text-4xl */
+  font-size: 4.5rem;
   font-weight: bold;
   margin: 2rem 0;
   color: #1f2b6c;
-  text-align: left; /* Align heading to the left */
-  width: 100%; /* Ensures it spans the section width */
+  text-align: center;
+  width: 100%;
 }
 
 /* Project Card */
 .project-card {
-  margin-bottom: 3rem; /* Same as mb-12 */
-  width: 100%;
-  padding: 1rem; /* Same as px-4 */
+  margin-bottom: 3rem;
+  width: 120%;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align content to the left */
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+/* Travel Log Project Card */
+.travel-log-card {
+  padding: 1rem;
+  margin-bottom: 3rem;
+  position: relative;
+  margin-left: -40px;
+}
+
+/* NEW: Carousel and Info Container */
+.carousel-and-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-left: -100px;
+}
+
+/* Carousel Image */
+.carousel-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Carousel Arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50%;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+/* NEW: Project Info */
+.project-info {
+  margin-left: 5rem;
+  max-width: 550px;
+}
+
+/* Synthwave Button */
+.synthwave-button {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6a00f4;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid #6a00f4;
+  border-radius: 5px;
+  background: linear-gradient(
+    45deg,
+    #d3e4ff 25%,
+    rgba(255, 255, 255, 0) 25%,
+    rgba(255, 255, 255, 0) 50%,
+    #d3e4ff 50%,
+    #d3e4ff 75%,
+    rgba(255, 255, 255, 0) 75%
+  );
+  background-size: 15px 15px; /* NEW: Thinner and more frequent diagonal lines */
+  background-color: rgba(255, 255, 255, 0.9); /* Clean base background */
+  box-shadow: 0 4px 10px rgba(106, 0, 244, 0.5);
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+.synthwave-button:hover {
+  background: #d3e4ff; /* NEW: Solid hover background color */
+  color: #6a00f4; /* Keep the text color the same */
+  box-shadow: 0 6px 15px rgba(106, 0, 244, 0.7);
+  transform: scale(1.05);
+}
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .carousel-and-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-info {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
 }
 
 /* Project Title */
 .project-title {
-  font-size: 1.5rem; /* Same as text-2xl */
-  font-weight: 600; /* Matches font-semibold */
-  color: #1f2b6c;
-  margin-bottom: 0.5rem;
-  text-align: left; /* Align text to the left */
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-align: left;
 }
 
 /* Project Description */
 .project-description {
-  color: #1f2b6c;
-  text-align: left; /* Align text to the left */
-  margin-bottom: 1rem;
-  max-width: 40rem; /* Same as max-w-2xl */
-  line-height: 1.6; /* Improves readability */
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: left;
+  max-width: 100%;
 }
 
-/* Project Image */
-.project-image {
-  margin-bottom: 1rem; /* Same as mb-4 */
-  width: 100%;
-  max-width: 30rem; /* Same as max-w-md */
-  border-radius: 0.5rem; /* Optional: Slightly rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add depth */
-}
-
-/* Project Video */
-.project-video {
-  width: 100%;
-  max-width: 30rem; /* Same as max-w-md */
-}
-
-.project-video iframe {
-  width: 100%;
-  height: 315px; /* Maintains aspect ratio */
-}
-
-/* Horizontal Line Separator */
+/* Project Separator */
 .project-separator {
-  width: 100%; /* Matches left alignment */
+  width: 100%;
   height: 1.5px;
-  background-color: #8d95b6; 
+  background-color: #8d95b6;
   margin: 2rem 0;
 }
