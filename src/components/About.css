@@ -1,12 +1,12 @@
 /* About Section */
 .about-section {
   text-align: left; /* Align all text to the left */
-  padding: 2rem 3rem; /* UPDATED: Expanded horizontal padding for more space */
+  padding: 2rem 3rem; /* Expanded horizontal padding for more space */
   color: #1f2b6c;
-  max-width: 1200px; /* UPDATED: Increase the section width for more words per line */
+  max-width: 1200px; /* Increase the section width for more words per line */
   margin: auto;
   margin-top: 300px; /* Adjust spacing above */
-  margin-left: 340px; /* NEW: Slightly move section to the left */
+  margin-left: 340px; /* Slightly move section to the left */
 }
 
 /* About Header */
@@ -30,7 +30,7 @@
 
 /* Expanded State */
 .about-text.expanded {
-  max-height: 60rem; /* UPDATED: Allow more room for expanded content */
+  max-height: 60rem; /* Allow more room for expanded content */
   opacity: 1;
 }
 
@@ -53,8 +53,8 @@
 
 /* Read More Link */
 .read-more-link {
-  display: inline-block;
-  margin-top: 1rem;
+  display: block; /* Set block to allow centering */
+  margin: 1rem auto 0; /* Center horizontally with auto margins */
   color: #6b7280;
   font-size: 1.2rem;
   text-decoration: none;
@@ -62,6 +62,7 @@
   background: transparent;
   cursor: pointer;
   position: relative;
+  text-align: center; /* Center the text */
 }
 
 .read-more-link:hover {

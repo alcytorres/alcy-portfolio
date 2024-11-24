@@ -1,11 +1,22 @@
-import React, { useState } from 'react';
-import './Navbar.css'; // Import the CSS file
-import logo from '../assets/alcy-logo.png'; // Import the logo
-
-import { FaEnvelope } from 'react-icons/fa'; // Email icon
+import React, { useState, useEffect } from 'react'; // NEW: Add useEffect
+import './Navbar.css';
+import logo from '../assets/alcy-logo.png';
+import { FaEnvelope } from 'react-icons/fa';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  // NEW: Effect to handle body scrolling
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'; // Disable scrolling
+    } else {
+      document.body.style.overflow = 'auto'; // Enable scrolling
+    }
+    return () => {
+      document.body.style.overflow = 'auto'; // Cleanup on component unmount
+    };
+  }, [isOpen]);
 
   return (
     <nav className="navbar">
