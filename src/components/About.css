@@ -1,11 +1,12 @@
 /* About Section */
 .about-section {
-  text-align: center;
-  padding: 2rem 1rem;
+  text-align: left; /* Align all text to the left */
+  padding: 2rem 3rem; /* UPDATED: Expanded horizontal padding for more space */
   color: #1f2b6c;
-  max-width: 800px;
+  max-width: 1200px; /* UPDATED: Increase the section width for more words per line */
   margin: auto;
-  margin-top: 300px;
+  margin-top: 300px; /* Adjust spacing above */
+  margin-left: 340px; /* NEW: Slightly move section to the left */
 }
 
 /* About Header */
@@ -19,16 +20,24 @@
 .about-text {
   font-size: 1.5rem;
   line-height: 1.8;
-  color: #2d3748;
+  color: #1f2b6c;
   margin-bottom: 1rem;
   overflow: hidden;
-  max-height: 5.5rem; /* Restricts the visible height for collapsed state */
+  max-height: 8rem; /* Restrict visible height */
   transition: max-height 0.3s ease, opacity 0.3s ease;
+  word-spacing: 0.05em; /* Subtle spacing for readability */
 }
 
+/* Expanded State */
 .about-text.expanded {
-  max-height: 20rem; /* Expands to fit additional content */
+  max-height: 60rem; /* UPDATED: Allow more room for expanded content */
   opacity: 1;
+}
+
+/* Bold Text */
+.bold-text {
+  font-weight: bold;
+  color: #2b6cb0;
 }
 
 /* Additional Text */
@@ -39,7 +48,7 @@
 }
 
 .about-text.expanded .additional-text {
-  opacity: 1; /* Fades in additional content when expanded */
+  opacity: 1; /* Reveal additional text on expansion */
 }
 
 /* Read More Link */
@@ -55,22 +64,17 @@
   position: relative;
 }
 
-.read-more-link::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #6b7280;
-  transition: width 0.3s ease-in-out;
-}
-
-
 .read-more-link:hover {
-  color: #1f2937; /* Darker color on hover */
+  color: #1f2937; /* Darker hover color */
+  text-decoration: underline; /* Underline for emphasis */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .about-section {
+    padding: 1.5rem; /* Adjust padding for smaller screens */
+  }
+
   .about-header {
     font-size: 3rem;
   }
