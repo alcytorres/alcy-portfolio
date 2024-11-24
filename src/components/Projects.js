@@ -47,7 +47,7 @@ function Projects() {
     },
     {
       title: 'PureHealth (Launching in 2025)',
-      description: 'SyncHealth is going to be a centralized app that aggregates and syncs all your health and fitness data from various apps like Health, Strava, Nike Run Club, and more into one seamless platform.',
+      description: 'PureHealth is going to be a centralized app that aggregates and syncs all your health and fitness data from various apps like Health, Strava, Nike Run Club, and more into one seamless platform.',
       image: null,
       video: null,
     },
