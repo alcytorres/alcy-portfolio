@@ -1,16 +1,16 @@
-/* Projects Section */
+/* Global Section Styles */
 .projects-section {
   text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 0;
   background-color: #f4f9fc;
   max-width: 1200px;
   margin: auto;
 }
 
-/* Heading */
+/* Heading Styles */
 .projects-heading {
   font-size: 4.5rem;
   font-weight: bold;
@@ -20,7 +20,7 @@
   width: 100%;
 }
 
-/* Project Card */
+/* Project Card Styles */
 .project-card {
   margin-bottom: 3rem;
   width: 120%;
@@ -31,24 +31,61 @@
   border: 1px solid transparent;
 }
 
-/* Travel Log Project Card */
+/* Individual Project Cards */
+.movies-watchlist-card {
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+}
+
 .travel-log-card {
-  padding: 1rem;
-  margin-bottom: 3rem;
+  margin: -30px 0 0 0; /* Negative top margin for spacing */
+  padding: 0;
   position: relative;
   margin-left: -40px;
 }
 
-/* NEW: Carousel and Info Container */
+.purehealth-card {
+  margin: 2.5rem auto;
+  padding: 2rem 1rem;
+}
+
+/* Project Title and Description */
+.project-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: left;
+  margin: 0; /* Remove default margins */
+  margin-top: -13px;
+}
+
+.project-description {
+  margin: 0; /* Remove default margins */
+  margin-top: 15px;
+  padding: 0; /* Remove default padding */
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: left;
+  max-width: 100%;
+}
+
+/* Project Separator */
+.project-separator {
+  width: 100%;
+  height: 1.5px;
+  background-color: #8d95b6;
+  margin: 2rem 0 0 0; /* Increase top margin to create space */
+}
+
+/* Carousel Styles */
 .carousel-and-info {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 0; /* Remove any default margins */
 }
 
-/* Carousel Container */
 .carousel-container {
   position: relative;
   width: 100%;
@@ -58,7 +95,6 @@
   margin-left: -100px;
 }
 
-/* Carousel Image */
 .carousel-image {
   width: 100%;
   height: auto;
@@ -90,13 +126,14 @@
   right: 10px;
 }
 
-/* NEW: Project Info */
+/* Project Info */
 .project-info {
-  margin-left: 5rem;
+  margin: 0; /* Remove margins */
+  margin-left: 5rem; /* Keep horizontal alignment */
   max-width: 550px;
 }
 
-/* Synthwave Button */
+/* Buttons */
 .synthwave-button {
   display: inline-block;
   font-size: 1.2rem;
@@ -115,7 +152,7 @@
     #d3e4ff 75%,
     rgba(255, 255, 255, 0) 75%
   );
-  background-size: 15px 15px; /* NEW: Thinner and more frequent diagonal lines */
+  background-size: 15px 15px; /* Thinner and more frequent diagonal lines */
   background-color: rgba(255, 255, 255, 0.9); /* Clean base background */
   box-shadow: 0 4px 10px rgba(106, 0, 244, 0.5);
   transition: all 0.3s ease;
@@ -123,14 +160,17 @@
 }
 
 .synthwave-button:hover {
-  background: #d3e4ff; /* NEW: Solid hover background color */
+  background: #d3e4ff; /* Solid hover background color */
   color: #6a00f4; /* Keep the text color the same */
   box-shadow: 0 6px 15px rgba(106, 0, 244, 0.7);
   transform: scale(1.05);
 }
 
-
-
+/* Reset Styles for Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -142,29 +182,4 @@
     margin-left: 0;
     margin-top: 1rem;
   }
-}
-
-/* Project Title */
-.project-title {
-  font-size: 2.2rem;
-  font-weight: bold;
-  margin-top: 1rem;
-  text-align: left;
-}
-
-/* Project Description */
-.project-description {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  text-align: left;
-  max-width: 100%;
-}
-
-/* Project Separator */
-.project-separator {
-  width: 100%;
-  height: 1.5px;
-  background-color: #8d95b6;
-  margin: 2rem 0;
 }
