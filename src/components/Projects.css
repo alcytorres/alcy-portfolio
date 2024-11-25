@@ -23,7 +23,7 @@
 /* Project Card Styles */
 .project-card {
   margin-bottom: 3rem;
-  width: 120%;
+  width: 100%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -34,14 +34,12 @@
 /* Individual Project Cards */
 .movies-watchlist-card {
   margin: 2rem auto;
-  padding: 2rem 1rem;
+  padding: 0;
 }
 
 .travel-log-card {
-  margin: -30px 0 0 0; /* Negative top margin for spacing */
+  margin: 2rem auto;
   padding: 0;
-  position: relative;
-  margin-left: -40px;
 }
 
 .purehealth-card {
@@ -54,14 +52,14 @@
   font-size: 2.2rem;
   font-weight: bold;
   text-align: left;
-  margin: 0; /* Remove default margins */
+  margin: 0;
   margin-top: -13px;
 }
 
 .project-description {
-  margin: 0; /* Remove default margins */
+  margin: 0;
   margin-top: 15px;
-  padding: 0; /* Remove default padding */
+  padding: 0;
   font-size: 1.05rem;
   line-height: 1.7;
   text-align: left;
@@ -73,32 +71,39 @@
   width: 100%;
   height: 1.5px;
   background-color: #8d95b6;
-  margin: 2rem 0 0 0; /* Increase top margin to create space */
+  margin: 2rem 0;
 }
 
-/* Carousel Styles */
+/* Carousel and Info Container */
 .carousel-and-info {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  flex-wrap: wrap;
-  margin: 0; /* Remove any default margins */
+  flex-wrap: nowrap; /* NEW: Prevent wrapping */
+  margin: 0;
 }
 
-.carousel-container {
+/* Carousel Container */
+.carousel-container,
+.video-container {
   position: relative;
-  width: 100%;
+  width: 50%; /* NEW: Set width to 50% */
   max-width: 600px;
-  margin: 0 auto;
   overflow: hidden;
-  margin-left: -100px;
 }
 
-.carousel-image {
+/* Carousel Image and Video Placeholder */
+.carousel-image,
+.video-placeholder {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* Video Placeholder Specific Styling */
+.video-placeholder {
+  min-height: 350px;
 }
 
 /* Carousel Arrows */
@@ -128,8 +133,9 @@
 
 /* Project Info */
 .project-info {
-  margin: 0; /* Remove margins */
-  margin-left: 5rem; /* Keep horizontal alignment */
+  margin: 0;
+  margin-left: 2rem;
+  width: 50%; /* NEW: Set width to 50% */
   max-width: 550px;
 }
 
@@ -152,24 +158,29 @@
     #d3e4ff 75%,
     rgba(255, 255, 255, 0) 75%
   );
-  background-size: 15px 15px; /* Thinner and more frequent diagonal lines */
-  background-color: rgba(255, 255, 255, 0.9); /* Clean base background */
+  background-size: 15px 15px;
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 4px 10px rgba(106, 0, 244, 0.5);
   transition: all 0.3s ease;
   margin-top: 30px;
 }
 
 .synthwave-button:hover {
-  background: #d3e4ff; /* Solid hover background color */
-  color: #6a00f4; /* Keep the text color the same */
+  background: #d3e4ff;
+  color: #6a00f4;
   box-shadow: 0 6px 15px rgba(106, 0, 244, 0.7);
   transform: scale(1.05);
 }
 
 /* Reset Styles for Headings */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0; /* Remove default margins */
-  padding: 0; /* Remove default padding */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
 
 /* Responsive Adjustments */
@@ -177,6 +188,12 @@ h1, h2, h3, h4, h5, h6 {
   .carousel-and-info {
     flex-direction: column;
     align-items: center;
+  }
+  .carousel-container,
+  .video-container,
+  .project-info {
+    width: 100%; /* NEW: Set width to 100% on small screens */
+    max-width: none;
   }
   .project-info {
     margin-left: 0;
