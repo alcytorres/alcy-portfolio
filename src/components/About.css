@@ -13,60 +13,71 @@
 .about-header {
   font-size: 4rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 2.8rem;
+  position: relative; /* Required to position the line */
+}
+
+/* Line under About Me header */
+.about-header-line {
+  width: calc(100% - 0.5rem); /* Adjust width to align with "o" in "About" */
+  height: 3px; /* Height of the line */
+  background-color: #74bcc4; /* Color of the line */
+  position: absolute;
+  bottom: -20px; /* Slightly below the text */
+  left: 0; /* Start from the 'A' */
+  max-width: 7rem; /* Limit the line length */
+}
+
+/* About Content */
+.about-content {
+  margin: 0; /* Ensure no additional margin */
 }
 
 /* About Text */
 .about-text {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.8;
   color: #1f2b6c;
-  margin-bottom: 1rem;
+  margin-bottom: 0; /* Ensure no margin below text */
   overflow: hidden;
-  max-height: 8rem; /* Restrict visible height */
-  transition: max-height 0.3s ease, opacity 0.3s ease;
+  /* REMOVE: max-height and transition properties */
+  /* max-height: 8rem; */
+  /* transition: max-height 0.3s ease, opacity 0.3s ease; */
   word-spacing: 0.05em; /* Subtle spacing for readability */
-}
-
-/* Expanded State */
-.about-text.expanded {
-  max-height: 60rem; /* Allow more room for expanded content */
-  opacity: 1;
 }
 
 /* Bold Text */
 .bold-text {
   font-weight: bold;
-  color: #2b6cb0;
+  color: #1f2b6c;
 }
 
 /* Additional Text */
 .additional-text {
-  display: inline;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  display: none; /* NEW: Hide when not expanded */
+  /* REMOVE: opacity and transition properties */
+  /* opacity: 0; */
+  /* transition: opacity 0.3s ease; */
 }
 
 .about-text.expanded .additional-text {
-  opacity: 1; /* Reveal additional text on expansion */
+  display: inline; /* NEW: Show when expanded */
 }
 
 /* Read More Link */
 .read-more-link {
   display: block; /* Set block to allow centering */
-  margin: 1rem auto 0; /* Center horizontally with auto margins */
+  margin: 0.5rem auto 0; /* Adjusted margin-top */
   color: #6b7280;
   font-size: 1.2rem;
   text-decoration: none;
   border: none;
   background: transparent;
   cursor: pointer;
-  position: relative;
   text-align: center; /* Center the text */
 }
 
 .read-more-link:hover {
-  color: #1f2937; /* Darker hover color */
   text-decoration: underline; /* Underline for emphasis */
 }
 
@@ -86,5 +97,6 @@
 
   .read-more-link {
     font-size: 1rem;
+    margin: 0.5rem auto 0; /* Adjusted margin-top */
   }
 }

@@ -42,7 +42,7 @@
 .menu-button {
   color: #1f2b6c;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   transition: transform 0.2s ease-in-out;
   z-index: 102;
 }
