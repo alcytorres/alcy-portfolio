@@ -14,10 +14,27 @@
 .projects-heading {
   font-size: 4.5rem;
   font-weight: bold;
-  margin: 2rem 0;
+  margin-bottom: 2rem; /* NEW: Adjusted margin for spacing */
   color: #1f2b6c;
-  text-align: center;
+  text-align: left;
   width: 100%;
+  margin-top: 200px;
+  position: relative; /* NEW: Added to position the line */
+}
+
+/* NEW: Line under Projects header */
+.projects-header-line {
+  width: calc(100% - 0.5rem); /* Adjust width as needed */
+  height: 3px; /* Height of the line */
+  background-color: #74bcc4; /* Color of the line */
+  position: absolute;
+  bottom: -15px; /* Slightly below the text */
+  left: 0; /* Start from the 'P' */
+  max-width: 9rem; /* NEW: Limit the line length to match 'o' in 'Projects' */
+}
+
+.projects-content {
+  margin-top: 3rem; /* NEW: Added margin above content for space below the line */
 }
 
 /* Project Card Styles */
@@ -40,11 +57,12 @@
 .travel-log-card {
   margin: 2rem auto;
   padding: 0;
+  position: relative;
 }
 
 .purehealth-card {
-  margin: 2.5rem auto;
-  padding: 2rem 1rem;
+  margin: 0rem auto;
+  padding: 0rem 1rem;
 }
 
 /* Project Title and Description */
@@ -53,17 +71,47 @@
   font-weight: bold;
   text-align: left;
   margin: 0;
-  margin-top: -13px;
+  margin-top: 0; /* Ensure no negative margin */
 }
 
 .project-description {
   margin: 0;
   margin-top: 15px;
   padding: 0;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   line-height: 1.7;
   text-align: left;
   max-width: 100%;
+}
+
+/* Project Info */
+.project-info {
+  margin: 0;
+  margin-left: 2rem;
+  max-width: 900px;
+  width: 55%;
+}
+
+/* Specific classes for project info sections */
+.movies-watchlist-info {
+  /* Adjust the margin here to move the section incrementally */
+  margin-top: 16px; /* Adjust this value as needed */
+}
+
+.travel-log-info {
+  /* Adjust the margin here to move the section incrementally */
+  margin-top: -25px; /* Adjust this value as needed */
+}
+
+/* Specific classes for video and carousel containers */
+.movies-watchlist-video {
+  /* You can adjust the margin here to move the video placeholder */
+  margin-top: 0px; /* Adjust this value as needed */
+}
+
+.travel-log-carousel {
+  /* You can adjust the margin here to move the slideshow */
+  margin-top: -42px; /* Adjust this value as needed */
 }
 
 /* Project Separator */
@@ -80,7 +128,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  flex-wrap: nowrap; /* NEW: Prevent wrapping */
+  flex-wrap: nowrap;
   margin: 0;
 }
 
@@ -88,7 +136,7 @@
 .carousel-container,
 .video-container {
   position: relative;
-  width: 50%; /* NEW: Set width to 50% */
+  width: 50%;
   max-width: 600px;
   overflow: hidden;
 }
@@ -101,9 +149,17 @@
   display: block;
 }
 
+/* Adjusted margins around the carousel image */
+.carousel-image {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 /* Video Placeholder Specific Styling */
 .video-placeholder {
   min-height: 350px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* Carousel Arrows */
@@ -129,14 +185,6 @@
 
 .right-arrow {
   right: 10px;
-}
-
-/* Project Info */
-.project-info {
-  margin: 0;
-  margin-left: 2rem;
-  width: 50%; /* NEW: Set width to 50% */
-  max-width: 550px;
 }
 
 /* Buttons */
@@ -192,7 +240,7 @@ h6 {
   .carousel-container,
   .video-container,
   .project-info {
-    width: 100%; /* NEW: Set width to 100% on small screens */
+    width: 100%;
     max-width: none;
   }
   .project-info {

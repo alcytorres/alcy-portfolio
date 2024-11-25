@@ -19,11 +19,11 @@ function Projects() {
   // Updated project list
   const projectList = [
     {
-      title: "Movies Watchlist App",
+      title: "Movies Watchlist",
       description: (
         <div className="project-description">
           <p>
-            The Watchlist Movies App is a user-friendly tool for tracking
+            The Watchlist Movies app is a user-friendly tool for tracking
             favorite films, planning future viewings, and discovering new movies.
           </p>
           <br /> {/* Add extra space between sentences */}
@@ -42,8 +42,8 @@ function Projects() {
       description: (
         <div className="project-description">
           <p>
-            The Travel Log is a personalized app that lets me track past
-            adventures and plan future bucket list destinations, creating a
+            A personalized app that lets me track past
+            adventures and plan future bucket list trips, creating a
             visual collection of my journeys.
           </p>
           <br />
@@ -68,125 +68,131 @@ function Projects() {
 
   return (
     <section id="projects" className="projects-section">
-      <h2 className="projects-heading">Projects</h2>
-      {projectList.map((project, index) => (
-        <div
-          key={index}
-          className={`project-card ${
-            project.title === "Movies Watchlist App"
-              ? "movies-watchlist-card"
-              : project.title === "Travel Log"
-              ? "travel-log-card"
-              : project.title === "PureHealth (Launching in 2025)"
-              ? "purehealth-card"
-              : ""
-          }`}
-        >
-          {project.sideBySide ? (
-            // Movies Watchlist App rendering
-            <div className="carousel-and-info">
-              {/* Video Container */}
-              <div className="video-container">
-                <iframe
-                  src={project.video}
-                  title={project.title}
-                  frameBorder="0"
-                  allowFullScreen
-                  className="video-placeholder"
-                ></iframe>
-              </div>
-              {/* Project Info */}
-              <div className="project-info">
-                <h3 className="project-title">{project.title}</h3>
-                {project.description}
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="synthwave-button"
-                >
-                  View Movies Watchlist
-                </a>
-              </div>
-            </div>
-          ) : project.carousel ? (
-            // Travel Log project rendering
-            <div className="carousel-and-info">
-              {/* Carousel Container */}
-              <div className="carousel-container">
-                <img
-                  src={project.images[currentImageIndex]}
-                  alt={`${project.title} Screenshot ${
-                    currentImageIndex + 1
-                  }`}
-                  className="carousel-image"
-                />
-                <div
-                  className="carousel-arrow left-arrow"
-                  onClick={() =>
-                    setCurrentImageIndex(
-                      (currentImageIndex - 1 + project.images.length) %
-                        project.images.length
-                    )
-                  }
-                >
-                  &#8249;
-                </div>
-                <div
-                  className="carousel-arrow right-arrow"
-                  onClick={() =>
-                    setCurrentImageIndex(
-                      (currentImageIndex + 1) % project.images.length
-                    )
-                  }
-                >
-                  &#8250;
-                </div>
-              </div>
-              {/* Project Info */}
-              <div className="project-info">
-                <h3 className="project-title">{project.title}</h3>
-                {project.description}
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="synthwave-button"
-                >
-                  View Travel Log
-                </a>
-              </div>
-            </div>
-          ) : (
-            // Other projects
-            <>
-              <h3 className="project-title">{project.title}</h3>
-              <p className="project-description">{project.description}</p>
-              {project.image && (
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="project-image"
-                />
-              )}
-              {project.video && (
-                <div className="project-video">
+      <h2 className="projects-heading">
+        Projects
+        <div className="projects-header-line"></div> {/* NEW: Added the line */}
+      </h2>
+      {/* NEW: Added margin below the header for spacing */}
+      <div className="projects-content">
+        {projectList.map((project, index) => (
+          <div
+            key={index}
+            className={`project-card ${
+              project.title === "Movies Watchlist"
+                ? "movies-watchlist-card"
+                : project.title === "Travel Log"
+                ? "travel-log-card"
+                : project.title === "PureHealth (Launching in 2025)"
+                ? "purehealth-card"
+                : ""
+            }`}
+          >
+            {project.sideBySide ? (
+              // Movies Watchlist App rendering
+              <div className="carousel-and-info">
+                {/* Video Container */}
+                <div className="video-container movies-watchlist-video">
                   <iframe
                     src={project.video}
                     title={project.title}
                     frameBorder="0"
                     allowFullScreen
+                    className="video-placeholder"
                   ></iframe>
                 </div>
-              )}
-            </>
-          )}
-          {/* Separator Line */}
-          {index < projectList.length - 1 && (
-            <hr className="project-separator" />
-          )}
-        </div>
-      ))}
+                {/* Project Info */}
+                <div className="project-info movies-watchlist-info">
+                  <h3 className="project-title">{project.title}</h3>
+                  {project.description}
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="synthwave-button"
+                  >
+                    View Movies Watchlist
+                  </a>
+                </div>
+              </div>
+            ) : project.carousel ? (
+              // Travel Log project rendering
+              <div className="carousel-and-info">
+                {/* Carousel Container */}
+                <div className="carousel-container travel-log-carousel">
+                  <img
+                    src={project.images[currentImageIndex]}
+                    alt={`${project.title} Screenshot ${
+                      currentImageIndex + 1
+                    }`}
+                    className="carousel-image"
+                  />
+                  <div
+                    className="carousel-arrow left-arrow"
+                    onClick={() =>
+                      setCurrentImageIndex(
+                        (currentImageIndex - 1 + project.images.length) %
+                          project.images.length
+                      )
+                    }
+                  >
+                    &#8249;
+                  </div>
+                  <div
+                    className="carousel-arrow right-arrow"
+                    onClick={() =>
+                      setCurrentImageIndex(
+                        (currentImageIndex + 1) % project.images.length
+                      )
+                    }
+                  >
+                    &#8250;
+                  </div>
+                </div>
+                {/* Project Info */}
+                <div className="project-info travel-log-info">
+                  <h3 className="project-title">{project.title}</h3>
+                  {project.description}
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="synthwave-button"
+                  >
+                    View Travel Log
+                  </a>
+                </div>
+              </div>
+            ) : (
+              // Other projects
+              <>
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-description">{project.description}</p>
+                {project.image && (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="project-image"
+                  />
+                )}
+                {project.video && (
+                  <div className="project-video">
+                    <iframe
+                      src={project.video}
+                      title={project.title}
+                      frameBorder="0"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                )}
+              </>
+            )}
+            {/* Separator Line */}
+            {index < projectList.length - 1 && (
+              <hr className="project-separator" />
+            )}
+          </div>
+        ))}
+      </div> {/* NEW: Closing projects-content div */}
     </section>
   );
 }
