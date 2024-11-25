@@ -1,26 +1,41 @@
 import React, { useState } from "react";
 import "./Projects.css";
-import { FaGithub } from "react-icons/fa"; // NEW: Import the FaGithub icon from react-icons
+import { FaGithub } from "react-icons/fa"; // Import the FaGithub icon from react-icons
 
-// NEW: Import the images for the carousel
+// Import the images for the carousel
 import travelLogMap from "../assets/travel-log-map.png";
 import travelLogView from "../assets/travel-log-view.png";
 import travelLog from "../assets/travel-log.png";
 
+// No additional imports needed for the video placeholder
+
 function Projects() {
-  // NEW: State for the carousel
+  // State for the carousel
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // NEW: Images array for the carousel
+  // Images array for the carousel
   const travelLogImages = [travelLogMap, travelLog, travelLogView];
 
   // Updated project list
   const projectList = [
     {
       title: "Movies Watchlist App",
-      description: "A web app to track movies you want to watch.",
-      image: "/images/movies-watchlist.png",
-      video: "https://www.youtube.com/embed/placeholder_link",
+      description: (
+        <div className="project-description">
+          <p>
+            The Watchlist Movies App is a user-friendly tool for tracking
+            favorite films, planning future viewings, and discovering new movies.
+          </p>
+          <br /> {/* Add extra space between sentences */}
+          <p>
+            By providing detailed information and streaming availability through
+            the TMDb API, it ensures users always know where to watch.
+          </p>
+        </div>
+      ),
+      video: "https://www.youtube.com/embed/placeholder_link", // YouTube video link
+      githubLink: "https://github.com/alcytorres/watchlist-movies-api", // GitHub link
+      sideBySide: true, // Indicates layout similar to Travel Log
     },
     {
       title: "Travel Log",
@@ -38,7 +53,6 @@ function Projects() {
           </p>
         </div>
       ),
-      // NEW: Indicate that this project has a carousel
       carousel: true,
       images: travelLogImages,
       githubLink: "https://github.com/alcytorres/travel-log-backend.git",
@@ -59,16 +73,44 @@ function Projects() {
         <div
           key={index}
           className={`project-card ${
-            project.title === "Travel Log"
-              ? "travel-log-card"
-              : project.title === "Movies Watchlist App"
+            project.title === "Movies Watchlist App"
               ? "movies-watchlist-card"
+              : project.title === "Travel Log"
+              ? "travel-log-card"
               : project.title === "PureHealth (Launching in 2025)"
               ? "purehealth-card"
               : ""
           }`}
         >
-          {project.carousel ? (
+          {project.sideBySide ? (
+            // Movies Watchlist App rendering
+            <div className="carousel-and-info">
+              {/* Video Container */}
+              <div className="video-container">
+                <iframe
+                  src={project.video}
+                  title={project.title}
+                  frameBorder="0"
+                  allowFullScreen
+                  className="video-placeholder"
+                ></iframe>
+              </div>
+              {/* Project Info */}
+              <div className="project-info">
+                <h3 className="project-title">{project.title}</h3>
+                {project.description}
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="synthwave-button"
+                >
+                  View Movies Watchlist
+                </a>
+              </div>
+            </div>
+          ) : project.carousel ? (
+            // Travel Log project rendering
             <div className="carousel-and-info">
               {/* Carousel Container */}
               <div className="carousel-container">
@@ -101,7 +143,7 @@ function Projects() {
                   &#8250;
                 </div>
               </div>
-              {/* UPDATED: Project Info */}
+              {/* Project Info */}
               <div className="project-info">
                 <h3 className="project-title">{project.title}</h3>
                 {project.description}
@@ -116,6 +158,7 @@ function Projects() {
               </div>
             </div>
           ) : (
+            // Other projects
             <>
               <h3 className="project-title">{project.title}</h3>
               <p className="project-description">{project.description}</p>
@@ -138,6 +181,7 @@ function Projects() {
               )}
             </>
           )}
+          {/* Separator Line */}
           {index < projectList.length - 1 && (
             <hr className="project-separator" />
           )}
