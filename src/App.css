@@ -4,7 +4,7 @@
   width: 100%;
   min-height: 100vh; /* Ensure full viewport coverage */
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  background-color: #f4f9fc; /* NEW: Solid background color */
+  background-color: #f4f9fc; /* Solid background color */
 }
 
 /* Ensure content layers on top of the background */
@@ -25,7 +25,7 @@ section {
 /* Typography */
 body {
   font-family: 'Arial', sans-serif; /* Use a clean, readable font */
-  color: #1f2b6c; /* NEW: Set the default text color */
+  color: #1f2b6c; /* Set the default text color */
   margin: 0;
   padding: 0;
   width: 100%;

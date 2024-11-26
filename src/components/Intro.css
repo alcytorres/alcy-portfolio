@@ -39,8 +39,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ensures image fills the container */
-  transform: scale(1.7) translate(6%, 18%); /* NEW: Adjust for both rightward and downward movement */
-  filter: grayscale(100%); /* Keeps the grayscale effect */
+  transform: scale(1.7) translate(6%, 18%); /* Adjust for both rightward and downward movement */
+  filter: grayscale(100%); /* Grayscale effect */
 }
 
 
@@ -91,12 +91,11 @@
 
 .social-icon:hover {
   transform: scale(1.15); /* Slight scaling effect on hover */
-  background: linear-gradient(145deg, #8ab7c7, #99c8d5); /* NEW: Darker gradient for hover */
-  border-color: #1f2b6c; /* NEW: Darker purple border on hover */
+  background: linear-gradient(145deg, #8ab7c7, #99c8d5); /* Darker gradient for hover */
+  border-color: #1f2b6c; /* Darker purple border on hover */
 }
 
-
-/* NEW: Scroll Indicator Container */
+/* Scroll Indicator Container */
 .scroll-indicator-container {
   position: absolute;
   bottom: -300px;

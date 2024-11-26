@@ -47,7 +47,7 @@ function Intro() {
         </div>
       </div>
 
-      {/* NEW: Scroll Indicator */}
+      {/* Scroll Indicator */}
       <div className="scroll-indicator-container">
         <span className="scroll-text">Scroll</span>
         <div className="scroll-line"></div>

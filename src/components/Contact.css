@@ -16,10 +16,10 @@
   margin-bottom: 1rem;
   color: #1f2b6c;
   text-align: center;
-  position: relative; /* NEW: Required for the line */
+  position: relative; /* Required for the line */
 }
 
-/* NEW: Line under Contact Me header */
+/* Line under Contact Me header */
 .contact-header-line {
   width: 350px;
   height: 3px;

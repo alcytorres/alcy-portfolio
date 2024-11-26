@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'; // NEW: Add useEffect
+import React, { useState, useEffect } from 'react'; // Add useEffect
 import './Navbar.css';
 import logo from '../assets/alcy-logo.png';
 import { FaEnvelope } from 'react-icons/fa';
@@ -6,7 +6,7 @@ import { FaEnvelope } from 'react-icons/fa';
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // NEW: Effect to handle body scrolling
+  // Effect to handle body scrolling
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'; // Disable scrolling

@@ -18,11 +18,11 @@ function About() {
           I’ve honed my skills through my role as a developer at Medpod, a healthcare company, building personal projects, and completing a coding bootcamp at Actualize. I also hold a Bachelor's degree in Business from Boston University.
         </p>
 
-        {/* NEW: Additional paragraphs */}
+        {/* Additional paragraphs */}
         <div
           className={`additional-content ${
             expanded ? 'expanded' : ''
-          }`} /* NEW: Toggle 'expanded' class */
+          }`} /* Toggle 'expanded' class */
         >
           <p className="staggered-text">
             My expertise spans various domains of software engineering, including backend and frontend development, UI/UX design, database management, and web development. This diverse skill set enables me to approach projects holistically, ensuring both robust functionality and an intuitive user experience.
@@ -38,7 +38,7 @@ function About() {
           </p>
         </div>
 
-        {/* NEW: Read More / Read Less button */}
+        {/* Read More / Read Less button */}
         <div className="read-more-container">
           <button
             onClick={() => setExpanded(!expanded)}

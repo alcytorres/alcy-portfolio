@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'custom-background': '#f4f9fc', // NEW
-        'custom-text': '#1f2b6c',       // NEW
+        'custom-background': '#f4f9fc', 
+        'custom-text': '#1f2b6c',       
       },
     },
   },

@@ -15,6 +15,6 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  background-color: #f4f9fc; /* NEW: Set background color */
-  color: #1f2b6c; /* NEW: Set default text color */
+  background-color: #f4f9fc; /* Set background color */
+  color: #1f2b6c; /* Set default text color */
 }

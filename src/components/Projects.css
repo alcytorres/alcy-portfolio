@@ -60,17 +60,15 @@
   position: relative;
 }
 
-/* NEW: PureHealth card styles, matching Travel Log */
 .purehealth-card {
-  margin: 2rem auto; /* NEW: Match margin with Travel Log */
+  margin: 2rem auto;
   padding: 0;
   position: relative;
 }
 
-/* PureHealth Container - Match Travel Log Dimensions */
 .purehealth-carousel {
-  width: 600px; /* Match Travel Log width */
-  height: 350px; /* Match Travel Log height */
+  width: 600px; 
+  height: 350px; 
   margin: 0 auto; /* Center horizontally */
   display: flex;
   justify-content: center;
@@ -86,7 +84,6 @@
   object-fit: contain; /* Preserve the entire image without cropping */
   display: block; /* Avoid inline spacing issues */
 }
-
 
 /* Project Title and Description */
 .project-title {
@@ -124,9 +121,9 @@
   margin-top: -25px;
 }
 
-/* NEW: PureHealth info styles, matching Travel Log */
+
 .purehealth-info {
-  margin-top: -25px; /* NEW: Match margin with Travel Log */
+  margin-top: -25px; 
 }
 
 /* Specific classes for video and carousel containers */
@@ -138,9 +135,8 @@
   margin-top: -42px;
 }
 
-/* NEW: PureHealth carousel styles, matching Travel Log */
 .purehealth-carousel {
-  margin-top: -42px; /* NEW: Match margin with Travel Log */
+  margin-top: -42px; 
 }
 
 /* Project Separator */
@@ -199,15 +195,15 @@
   cursor: pointer;
   user-select: none;
   border-radius: 50%;
-  z-index: 10; /* NEW: Ensure arrows appear above the carousel images */
+  z-index: 10; /* Ensure arrows appear above the carousel images */
 }
 
 .left-arrow {
-  left: 10px; /* Position inside the left of the carousel */
+  left: 10px; 
 }
 
 .right-arrow {
-  right: 10px; /* Position inside the right of the carousel */
+  right: 10px; 
 }
 
 /* Carousel Container */
