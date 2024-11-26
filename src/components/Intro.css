@@ -83,7 +83,7 @@
   align-items: center;
   justify-content: center;
   background: #abdbeb; /* Default light blue background */
-  border: 4px solid #9131e5; /* Purple border */
+  border: 4px solid #1f2b6c; /* Purple border */
   border-radius: 12px; /* Rounded corners for modern UI */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
   transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease; /* Smooth hover transitions */
@@ -92,7 +92,7 @@
 .social-icon:hover {
   transform: scale(1.15); /* Slight scaling effect on hover */
   background: linear-gradient(145deg, #8ab7c7, #99c8d5); /* NEW: Darker gradient for hover */
-  border-color: #7a2dc9; /* NEW: Darker purple border on hover */
+  border-color: #1f2b6c; /* NEW: Darker purple border on hover */
 }
 
 

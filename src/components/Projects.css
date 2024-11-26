@@ -24,13 +24,13 @@
 
 /* NEW: Line under Projects header */
 .projects-header-line {
-  width: calc(100% - 0.5rem); /* Adjust width as needed */
+  width: calc(100% - 0.3rem); /* Adjust width as needed */
   height: 3px; /* Height of the line */
   background-color: #74bcc4; /* Color of the line */
   position: absolute;
   bottom: -15px; /* Slightly below the text */
   left: 0; /* Start from the 'P' */
-  max-width: 9rem; /* NEW: Limit the line length to match 'o' in 'Projects' */
+  max-width: 6.5rem; /* NEW: Limit the line length to match 'o' in 'Projects' */
 }
 
 .projects-content {
