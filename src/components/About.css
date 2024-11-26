@@ -35,11 +35,11 @@
 
 /* About Text */
 .about-text,
-.staggered-text { /* NEW: Unified styling for all paragraphs */
+.staggered-text { /* Unified styling for all paragraphs */
   font-size: 1.2rem;
   line-height: 1.8;
   color: #1f2b6c;
-  margin-bottom: 2.2rem; /* UPDATED: Adjusted spacing between paragraphs */
+  margin-bottom: 2.2rem; /* Adjusted spacing between paragraphs */
   word-spacing: 0.05em;
 }
 

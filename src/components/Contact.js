@@ -6,7 +6,7 @@ function Contact() {
     <section id="contact" className="contact-section">
       <h2 className="contact-heading">
         Contact Me
-        <div className="contact-header-line"></div> {/* NEW: Added the line */}
+        <div className="contact-header-line"></div> 
       </h2>
       <p className="contact-description">
         If you're interested in collaborating or just want to connect, feel free to reach out!

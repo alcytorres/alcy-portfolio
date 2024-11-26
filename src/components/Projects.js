@@ -7,8 +7,8 @@ import travelLogMap from "../assets/travel-log-map.png";
 import travelLogView from "../assets/travel-log-view.png";
 import travelLog from "../assets/travel-log.png";
 
-// NEW: Import the PureHealth image
-import pureHealthImage from "../assets/pure-health.png"; // NEW
+// Import the PureHealth image
+import pureHealthImage from "../assets/pure-health.png"; 
 
 function Projects() {
   // State for the carousel
