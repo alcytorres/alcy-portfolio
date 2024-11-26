@@ -22,7 +22,7 @@ function Footer() {
         </div>
         <br></br>
         <br></br>
-        <p>Alcy Torres | All Rights Reserved</p>
+        <p>© Alcy Torres | All Rights Reserved</p>
         <br></br>
       </div>
     </footer>
