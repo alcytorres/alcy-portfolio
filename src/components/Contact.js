@@ -1,10 +1,13 @@
 import React from 'react';
-import './Contact.css'; // NEW: Import the CSS file for styling
+import './Contact.css'; // Updated CSS file
 
 function Contact() {
   return (
     <section id="contact" className="contact-section">
-      <h2 className="contact-heading">Get in touch</h2>
+      <h2 className="contact-heading">
+        Contact Me
+        <div className="contact-header-line"></div> {/* NEW: Added the line */}
+      </h2>
       <p className="contact-description">
         If you're interested in collaborating or just want to connect, feel free to reach out!
       </p>

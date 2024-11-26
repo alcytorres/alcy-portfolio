@@ -7,7 +7,8 @@ import travelLogMap from "../assets/travel-log-map.png";
 import travelLogView from "../assets/travel-log-view.png";
 import travelLog from "../assets/travel-log.png";
 
-// No additional imports needed for the video placeholder
+// NEW: Import the PureHealth image
+import pureHealthImage from "../assets/pure-health.png"; // NEW
 
 function Projects() {
   // State for the carousel
@@ -26,7 +27,7 @@ function Projects() {
             The Watchlist Movies app is a user-friendly tool for tracking
             favorite films, planning future viewings, and discovering new movies.
           </p>
-          <br /> {/* Add extra space between sentences */}
+          <br />
           <p>
             By providing detailed information and streaming availability through
             the TMDb API, it ensures users always know where to watch.
@@ -34,8 +35,8 @@ function Projects() {
         </div>
       ),
       video: "https://www.youtube.com/embed/placeholder_link", // YouTube video link
-      githubLink: "https://github.com/alcytorres/watchlist-movies-api", // GitHub link
-      sideBySide: true, // Indicates layout similar to Travel Log
+      githubLink: "https://github.com/alcytorres/watchlist-movies-api",
+      sideBySide: true,
     },
     {
       title: "Travel Log",
@@ -59,10 +60,20 @@ function Projects() {
     },
     {
       title: "PureHealth (Launching in 2025)",
-      description:
-        "PureHealth is going to be a centralized app that aggregates and syncs all your health and fitness data from various apps like Health, Strava, Nike Run Club, and more into one seamless platform.",
-      image: null,
-      video: null,
+      description: (
+        <div className="project-description">
+          <p>
+            PureHealth is going to be a centralized app that aggregates and syncs all your health and fitness data from various apps like Health, Strava, Nike Run Club, and more into one seamless platform.
+          </p>
+          <br />
+          <p>
+            It will empower users to monitor their wellness journey holistically, offering actionable insights and personalized trends in an intuitive interface.
+          </p>
+        </div>
+      ),
+      image: pureHealthImage,
+      carousel: false,
+      singleImage: true,
     },
   ];
 
@@ -70,9 +81,8 @@ function Projects() {
     <section id="projects" className="projects-section">
       <h2 className="projects-heading">
         Projects
-        <div className="projects-header-line"></div> {/* NEW: Added the line */}
+        <div className="projects-header-line"></div>
       </h2>
-      {/* NEW: Added margin below the header for spacing */}
       <div className="projects-content">
         {projectList.map((project, index) => (
           <div
@@ -88,9 +98,7 @@ function Projects() {
             }`}
           >
             {project.sideBySide ? (
-              // Movies Watchlist App rendering
               <div className="carousel-and-info">
-                {/* Video Container */}
                 <div className="video-container movies-watchlist-video">
                   <iframe
                     src={project.video}
@@ -100,7 +108,6 @@ function Projects() {
                     className="video-placeholder"
                   ></iframe>
                 </div>
-                {/* Project Info */}
                 <div className="project-info movies-watchlist-info">
                   <h3 className="project-title">{project.title}</h3>
                   {project.description}
@@ -115,9 +122,7 @@ function Projects() {
                 </div>
               </div>
             ) : project.carousel ? (
-              // Travel Log project rendering
               <div className="carousel-and-info">
-                {/* Carousel Container */}
                 <div className="carousel-container travel-log-carousel">
                   <img
                     src={project.images[currentImageIndex]}
@@ -148,7 +153,6 @@ function Projects() {
                     &#8250;
                   </div>
                 </div>
-                {/* Project Info */}
                 <div className="project-info travel-log-info">
                   <h3 className="project-title">{project.title}</h3>
                   {project.description}
@@ -162,37 +166,32 @@ function Projects() {
                   </a>
                 </div>
               </div>
+            ) : project.singleImage ? (
+              <div className="carousel-and-info">
+                <div className="carousel-container purehealth-carousel">
+                  <img
+                    src={project.image}
+                    alt={`${project.title}`}
+                    className="carousel-image"
+                  />
+                </div>
+                <div className="project-info purehealth-info">
+                  <h3 className="project-title">{project.title}</h3>
+                  {project.description}
+                </div>
+              </div>
             ) : (
-              // Other projects
               <>
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
-                {project.image && (
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="project-image"
-                  />
-                )}
-                {project.video && (
-                  <div className="project-video">
-                    <iframe
-                      src={project.video}
-                      title={project.title}
-                      frameBorder="0"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                )}
               </>
             )}
-            {/* Separator Line */}
             {index < projectList.length - 1 && (
               <hr className="project-separator" />
             )}
           </div>
         ))}
-      </div> {/* NEW: Closing projects-content div */}
+      </div>
     </section>
   );
 }

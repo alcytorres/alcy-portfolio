@@ -14,27 +14,27 @@
 .projects-heading {
   font-size: 4.5rem;
   font-weight: bold;
-  margin-bottom: 2rem; /* NEW: Adjusted margin for spacing */
+  margin-bottom: 2rem; /* Adjusted margin for spacing */
   color: #1f2b6c;
   text-align: left;
   width: 100%;
   margin-top: 200px;
-  position: relative; /* NEW: Added to position the line */
+  position: relative; /* Added to position the line */
 }
 
-/* NEW: Line under Projects header */
+/* Line under Projects header */
 .projects-header-line {
   width: calc(100% - 0.3rem); /* Adjust width as needed */
-  height: 3px; /* Height of the line */
-  background-color: #74bcc4; /* Color of the line */
+  height: 3px;
+  background-color: #74bcc4;
   position: absolute;
-  bottom: -15px; /* Slightly below the text */
-  left: 0; /* Start from the 'P' */
-  max-width: 6.5rem; /* NEW: Limit the line length to match 'o' in 'Projects' */
+  bottom: -15px;
+  left: 0;
+  max-width: 6.5rem; /* Limit the line length to match 'o' in 'Projects' */
 }
 
 .projects-content {
-  margin-top: 3rem; /* NEW: Added margin above content for space below the line */
+  margin-top: 3rem; /* Added margin above content for space below the line */
 }
 
 /* Project Card Styles */
@@ -60,10 +60,33 @@
   position: relative;
 }
 
+/* NEW: PureHealth card styles, matching Travel Log */
 .purehealth-card {
-  margin: 0rem auto;
-  padding: 0rem 1rem;
+  margin: 2rem auto; /* NEW: Match margin with Travel Log */
+  padding: 0;
+  position: relative;
 }
+
+/* PureHealth Container - Match Travel Log Dimensions */
+.purehealth-carousel {
+  width: 600px; /* Match Travel Log width */
+  height: 350px; /* Match Travel Log height */
+  margin: 0 auto; /* Center horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent overflow */
+  background-color: #f4f9fc; /* Optional: Add background color for consistency */
+}
+
+/* PureHealth Image - Adjust Scaling */
+.purehealth-carousel img {
+  max-width: 100%; /* Ensure the image scales to container width */
+  max-height: 100%; /* Ensure the image scales to container height */
+  object-fit: contain; /* Preserve the entire image without cropping */
+  display: block; /* Avoid inline spacing issues */
+}
+
 
 /* Project Title and Description */
 .project-title {
@@ -94,24 +117,30 @@
 
 /* Specific classes for project info sections */
 .movies-watchlist-info {
-  /* Adjust the margin here to move the section incrementally */
-  margin-top: 16px; /* Adjust this value as needed */
+  margin-top: 16px;
 }
 
 .travel-log-info {
-  /* Adjust the margin here to move the section incrementally */
-  margin-top: -25px; /* Adjust this value as needed */
+  margin-top: -25px;
+}
+
+/* NEW: PureHealth info styles, matching Travel Log */
+.purehealth-info {
+  margin-top: -25px; /* NEW: Match margin with Travel Log */
 }
 
 /* Specific classes for video and carousel containers */
 .movies-watchlist-video {
-  /* You can adjust the margin here to move the video placeholder */
-  margin-top: 0px; /* Adjust this value as needed */
+  margin-top: 0px;
 }
 
 .travel-log-carousel {
-  /* You can adjust the margin here to move the slideshow */
-  margin-top: -42px; /* Adjust this value as needed */
+  margin-top: -42px;
+}
+
+/* NEW: PureHealth carousel styles, matching Travel Log */
+.purehealth-carousel {
+  margin-top: -42px; /* NEW: Match margin with Travel Log */
 }
 
 /* Project Separator */
@@ -155,21 +184,14 @@
   margin-bottom: 2rem;
 }
 
-/* Video Placeholder Specific Styling */
-.video-placeholder {
-  min-height: 350px;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
 /* Carousel Arrows */
 .carousel-arrow {
-  position: absolute;
-  top: 50%;
+  position: absolute; /* Adjusted to absolute positioning */
+  top: 50%; /* Center the arrows vertically */
   transform: translateY(-50%);
   font-size: 2rem;
   color: white;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.25);
   width: 2rem;
   height: 2rem;
   line-height: 2rem;
@@ -177,14 +199,23 @@
   cursor: pointer;
   user-select: none;
   border-radius: 50%;
+  z-index: 10; /* NEW: Ensure arrows appear above the carousel images */
 }
 
 .left-arrow {
-  left: 10px;
+  left: 10px; /* Position inside the left of the carousel */
 }
 
 .right-arrow {
-  right: 10px;
+  right: 10px; /* Position inside the right of the carousel */
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: relative; /* Ensure arrows are positioned relative to the carousel */
+  width: 50%;
+  max-width: 600px;
+  overflow: hidden;
 }
 
 /* Buttons */
@@ -248,3 +279,5 @@ h6 {
     margin-top: 1rem;
   }
 }
+
+
