@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Projects.css";
-import { FaGithub } from "react-icons/fa"; // Import the FaGithub icon from react-icons
+import { FaGithub } from "react-icons/fa";
 
 // Import the images for the carousel
 import travelLogMap from "../assets/travel-log-map.png";
@@ -8,14 +8,22 @@ import travelLogView from "../assets/travel-log-view.png";
 import travelLog from "../assets/travel-log.png";
 
 // Import the PureHealth image
-import pureHealthImage from "../assets/pure-health.png"; 
+import pureHealthImage from "../assets/pure-health.png";
+
+// NEW: Import the images for the Movies Watchlist carousel
+import movies1 from "../assets/movies1.png"; // NEW
+import movies2 from "../assets/movies2.png"; // NEW
+import movies4 from "../assets/movies4.png"; // NEW
 
 function Projects() {
-  // State for the carousel
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  // NEW: Initialize carousel indices for projects with carousels
+  const [carouselIndices, setCarouselIndices] = useState({}); // NEW
 
-  // Images array for the carousel
+  // Images array for the Travel Log carousel
   const travelLogImages = [travelLogMap, travelLog, travelLogView];
+
+  // NEW: Images array for the Movies Watchlist carousel
+  const moviesImages = [movies1, movies2, movies4]; // NEW
 
   // Updated project list
   const projectList = [
@@ -34,9 +42,12 @@ function Projects() {
           </p>
         </div>
       ),
-      video: "https://www.youtube.com/embed/placeholder_link", // YouTube video link
+      // REMOVE: Remove 'video' and 'sideBySide' properties
+      // video: "https://www.youtube.com/embed/placeholder_link", // REMOVE
+      // sideBySide: true, // REMOVE
+      carousel: true, // NEW: Use carousel
+      images: moviesImages, // NEW
       githubLink: "https://github.com/alcytorres/watchlist-movies-api",
-      sideBySide: true,
     },
     {
       title: "Travel Log",
@@ -77,6 +88,17 @@ function Projects() {
     },
   ];
 
+  // NEW: Set initial carousel indices
+  useEffect(() => {
+    const initialIndices = {};
+    projectList.forEach((project) => {
+      if (project.carousel) {
+        initialIndices[project.title] = 0;
+      }
+    });
+    setCarouselIndices(initialIndices);
+  }, []);
+
   return (
     <section id="projects" className="projects-section">
       <h2 className="projects-heading">
@@ -97,73 +119,81 @@ function Projects() {
                 : ""
             }`}
           >
-            {project.sideBySide ? (
+            {project.carousel ? (
+              // Carousel project rendering
               <div className="carousel-and-info">
-                <div className="video-container movies-watchlist-video">
-                  <iframe
-                    src={project.video}
-                    title={project.title}
-                    frameBorder="0"
-                    allowFullScreen
-                    className="video-placeholder"
-                  ></iframe>
-                </div>
-                <div className="project-info movies-watchlist-info">
-                  <h3 className="project-title">{project.title}</h3>
-                  {project.description}
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="synthwave-button"
-                  >
-                    View Movies Watchlist
-                  </a>
-                </div>
-              </div>
-            ) : project.carousel ? (
-              <div className="carousel-and-info">
-                <div className="carousel-container travel-log-carousel">
+                {/* Carousel Container */}
+                <div
+                  className={`carousel-container ${
+                    project.title === "Movies Watchlist"
+                      ? "movies-watchlist-carousel"
+                      : project.title === "Travel Log"
+                      ? "travel-log-carousel"
+                      : ""
+                  }`}
+                >
                   <img
-                    src={project.images[currentImageIndex]}
+                    src={
+                      project.images[carouselIndices[project.title] || 0]
+                    }
                     alt={`${project.title} Screenshot ${
-                      currentImageIndex + 1
+                      (carouselIndices[project.title] || 0) + 1
                     }`}
                     className="carousel-image"
                   />
-                  <div
-                    className="carousel-arrow left-arrow"
-                    onClick={() =>
-                      setCurrentImageIndex(
-                        (currentImageIndex - 1 + project.images.length) %
-                          project.images.length
-                      )
-                    }
-                  >
-                    &#8249;
-                  </div>
-                  <div
-                    className="carousel-arrow right-arrow"
-                    onClick={() =>
-                      setCurrentImageIndex(
-                        (currentImageIndex + 1) % project.images.length
-                      )
-                    }
-                  >
-                    &#8250;
+                  {/* NEW: Arrows inside the carousel-container, beneath the image */}
+                  <div className="carousel-controls"> {/* NEW */}
+                    <button
+                      className="carousel-arrow left-arrow"
+                      onClick={() => {
+                        const newIndex =
+                          (carouselIndices[project.title] - 1 + project.images.length) %
+                          project.images.length;
+                        setCarouselIndices({
+                          ...carouselIndices,
+                          [project.title]: newIndex,
+                        });
+                      }}
+                    >
+                      &#8249;
+                    </button>
+                    <button
+                      className="carousel-arrow right-arrow"
+                      onClick={() => {
+                        const newIndex =
+                          (carouselIndices[project.title] + 1) % project.images.length;
+                        setCarouselIndices({
+                          ...carouselIndices,
+                          [project.title]: newIndex,
+                        });
+                      }}
+                    >
+                      &#8250;
+                    </button>
                   </div>
                 </div>
-                <div className="project-info travel-log-info">
+                {/* Project Info */}
+                <div
+                  className={`project-info ${
+                    project.title === "Movies Watchlist"
+                      ? "movies-watchlist-info"
+                      : project.title === "Travel Log"
+                      ? "travel-log-info"
+                      : ""
+                  }`}
+                >
                   <h3 className="project-title">{project.title}</h3>
                   {project.description}
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="synthwave-button"
-                  >
-                    View Travel Log
-                  </a>
+                  {project.githubLink && (
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="synthwave-button"
+                    >
+                      {`View ${project.title}`}
+                    </a>
+                  )}
                 </div>
               </div>
             ) : project.singleImage ? (
