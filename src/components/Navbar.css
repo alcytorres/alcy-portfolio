@@ -165,7 +165,7 @@
 /* Get in Touch Button */
 .get-in-touch {
   position: absolute;
-  top: 2rem;
+  top: 1.75rem;
   right: 1.6rem;
   z-index: 102;
 }
@@ -185,4 +185,88 @@
 
 .get-in-touch-icon {
   margin-right: 0.5rem;
+}
+
+/* NEW: Responsive Design */
+@media (max-width: 1215px) { /* NEW */
+  /* NEW: Adjust body top padding to prevent overlap */
+  body { /* NEW */
+    padding-top: 70px; /* NEW: Adjust this value based on your navbar height */
+  }
+}
+
+@media (max-width: 620px) { /* NEW */
+  /* NEW: Hide menu descriptions on small screens */
+  .menu-description { /* NEW */
+    display: none; /* NEW */
+  }
+
+  /* NEW: Adjust menu item alignment */
+  .menu-item { /* NEW */
+    gap: 2rem; /* NEW: Reduce gap between menu items and descriptions */
+  }
+}
+
+/* NEW: Responsive Design */
+@media (max-width: 768px) { /* NEW */
+  /* NEW: Adjust menu button and get in touch button positioning */
+  .menu-button {
+    font-size: 1.4rem; /* NEW */
+  }
+
+  .get-in-touch {
+    top: 1rem; /* NEW */
+    right: 1rem; /* NEW */
+  }
+
+  .get-in-touch-link {
+    font-size: 1.2rem; /* NEW */
+  }
+
+  /* NEW: Hide vertical line */
+  .vertical-line {
+    display: none; /* NEW */
+  }
+}
+
+@media (max-width: 420px) { /* NEW */
+  /* NEW: Adjust logo size */
+  .logo {
+    width: 50px; /* NEW */
+  }
+
+  /* NEW: Adjust menu button font size */
+  .menu-button {
+    font-size: 1.2rem; /* NEW */
+  }
+
+  /* NEW: Adjust menu overlay styles */
+  .menu-list {
+    margin-top: 5rem; /* NEW */
+    font-size: 2.5rem; /* NEW */
+    gap: 2rem; /* NEW */
+  }
+
+  .menu-link {
+    font-size: 2.5rem; /* NEW */
+  }
+
+  .menu-item {
+    gap: 2rem; /* NEW */
+    padding-left: 1rem; /* NEW */
+  }
+
+  .menu-description {
+    font-size: 1rem; /* NEW */
+  }
+
+  /* Adjust Get in Touch Button */
+  .get-in-touch {
+    top: 1rem; /* NEW */
+    right: 1rem; /* NEW */
+  }
+
+  .get-in-touch-link {
+    font-size: 1rem; /* NEW */
+  }
 }
