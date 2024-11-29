@@ -14,27 +14,27 @@
 .projects-heading {
   font-size: 4.5rem;
   font-weight: bold;
-  margin-bottom: 2rem; /* Adjusted margin for spacing */
+  margin-bottom: 2rem;
   color: #1f2b6c;
   text-align: left;
   width: 100%;
   margin-top: 200px;
-  position: relative; /* Added to position the line */
+  position: relative;
 }
 
 /* Line under Projects header */
 .projects-header-line {
-  width: calc(100% - 0.3rem); /* Adjust width as needed */
+  width: calc(100% - 0.3rem);
   height: 3px;
   background-color: #74bcc4;
   position: absolute;
   bottom: -15px;
   left: 0;
-  max-width: 6.5rem; /* Limit the line length to match 'o' in 'Projects' */
+  max-width: 6.5rem;
 }
 
 .projects-content {
-  margin-top: 3rem; /* Added margin above content for space below the line */
+  margin-top: 3rem;
 }
 
 /* Project Card Styles */
@@ -67,22 +67,22 @@
 }
 
 .purehealth-carousel {
-  width: 600px; 
-  height: 350px; 
-  margin: 0 auto; /* Center horizontally */
+  width: 600px;
+  height: 350px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Prevent overflow */
-  background-color: #f4f9fc; /* Optional: Add background color for consistency */
+  overflow: hidden;
+  background-color: #f4f9fc;
 }
 
 /* PureHealth Image - Adjust Scaling */
 .purehealth-carousel img {
-  max-width: 100%; /* Ensure the image scales to container width */
-  max-height: 100%; /* Ensure the image scales to container height */
-  object-fit: contain; /* Preserve the entire image without cropping */
-  display: block; /* Avoid inline spacing issues */
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 /* Project Title and Description */
@@ -91,7 +91,7 @@
   font-weight: bold;
   text-align: left;
   margin: 0;
-  margin-top: 0; /* Ensure no negative margin */
+  margin-top: 0;
 }
 
 .project-description {
@@ -121,31 +121,12 @@
   margin-top: -25px;
 }
 
-
 .purehealth-info {
-  margin-top: -25px; 
+  margin-top: -25px;
 }
 
 /* Specific classes for video and carousel containers */
-.movies-watchlist-video {
-  margin-top: 0px;
-}
-
-.travel-log-carousel {
-  margin-top: -42px;
-}
-
-.purehealth-carousel {
-  margin-top: -42px; 
-}
-
-/* Project Separator */
-.project-separator {
-  width: 100%;
-  height: 1.5px;
-  background-color: #8d95b6;
-  margin: 2rem 0;
-}
+/* (No changes to these as per your request) */
 
 /* Carousel and Info Container */
 .carousel-and-info {
@@ -164,9 +145,11 @@
   width: 50%;
   max-width: 600px;
   overflow: hidden;
+  display: flex; /* NEW: Added to enable flex alignment */
+  flex-direction: column; /* NEW: Stack image and controls vertically */
+  align-items: center; /* NEW: Center items horizontally */
 }
 
-/* Carousel Image and Video Placeholder */
 .carousel-image,
 .video-placeholder {
   width: 100%;
@@ -177,41 +160,52 @@
 /* Adjusted margins around the carousel image */
 .carousel-image {
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0rem; /* NEW: Removed bottom margin to align controls */
 }
 
-/* Carousel Arrows */
-.carousel-arrow {
-  position: absolute; /* Adjusted to absolute positioning */
-  top: 50%; /* Center the arrows vertically */
-  transform: translateY(-50%);
+/* NEW: Carousel Controls (arrows inside the carousel-container, beneath the image) */
+.carousel-controls { /* NEW */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem; /* NEW: Spacing above arrows */
+}
+
+.carousel-arrow { /* NEW */
   font-size: 2rem;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.25);
-  width: 2rem;
-  height: 2rem;
-  line-height: 2rem;
-  text-align: center;
+  color: #1f2b6c;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
   user-select: none;
-  border-radius: 50%;
-  z-index: 10; /* Ensure arrows appear above the carousel images */
+  margin: 0 1rem; /* NEW: Space between arrows */
 }
 
-.left-arrow {
-  left: 10px; 
+.carousel-arrow:hover { /* NEW */
+  color: #74bcc4;
 }
 
-.right-arrow {
-  right: 10px; 
+
+/* Specific classes for video and carousel containers */
+.movies-watchlist-video {
+  margin-top: 0px;
 }
 
-/* Carousel Container */
-.carousel-container {
-  position: relative; /* Ensure arrows are positioned relative to the carousel */
-  width: 50%;
-  max-width: 600px;
-  overflow: hidden;
+.travel-log-carousel {
+  margin-top: -42px;
+}
+
+/* NEW: PureHealth carousel styles, matching Travel Log */
+.purehealth-carousel {
+  margin-top: -42px; /* NEW: Match margin with Travel Log */
+}
+
+/* Project Separator */
+.project-separator {
+  width: 100%;
+  height: 1.5px;
+  background-color: #8d95b6;
+  margin: 2rem 0;
 }
 
 /* Buttons */
@@ -275,5 +269,3 @@ h6 {
     margin-top: 1rem;
   }
 }
-
-
