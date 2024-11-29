@@ -143,21 +143,22 @@
     left: 50%;
     bottom: 20px;
     transform: translateX(-50%);
-    display: none; /* NEW: Hide scroll indicator below 1215px */
+    display: none; /* Hide scroll indicator below 1215px */
   }
 }
 
 /* Adjustments for screens between 515px and 420px */
 @media (max-width: 515px) and (min-width: 421px) {
-  /* Adjust profile picture size and positioning */
+  /* Adjust profile picture size */
   .profile-picture {
     width: 18rem;
     height: 18rem;
   }
 
-  .profile-picture-img {
+  /* REMOVE: Adjusting transform on image */
+  /* .profile-picture-img {
     transform: scale(1.7) translate(10%, 20%);
-  }
+  } */ /* REMOVE */
 
   .intro-text-container {
     margin-bottom: 2rem;
@@ -172,9 +173,10 @@
     height: 16rem;
   }
 
-  .profile-picture-img {
-    transform: scale(1.5) translate(0%, 0%); /* NEW: Adjust transform to prevent cropping */
-  }
+  /* REMOVE: Adjusting transform on image */
+  /* .profile-picture-img {
+    transform: scale(1.5) translate(0%, 0%);
+  } */ /* REMOVE */
 
   .intro-heading {
     font-size: 4rem; /* Reduce heading size */
@@ -204,16 +206,9 @@
   }
 }
 
-/* NEW: Hide scroll indicator below 1215px */
+/* Hide scroll indicator below 1215px */
 @media (max-width: 1215px) {
   .scroll-indicator-container {
-    display: none; /* NEW */
-  }
-}
-
-/* NEW: Ensure profile picture top is not cropped below 420px */
-@media (max-width: 420px) {
-  .profile-picture-img {
-    transform: scale(1.5) translate(0%, 0%); /* NEW */
+    display: none;
   }
 }
