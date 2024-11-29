@@ -43,7 +43,6 @@
   filter: grayscale(100%); /* Grayscale effect */
 }
 
-
 /* Introductory Text Container */
 .intro-text-container {
   max-width: 40rem;
@@ -134,5 +133,87 @@
 
   .intro-text-container {
     text-align: center;
+  }
+}
+
+/* Adjustments for screens between 1215px and 420px */
+@media (max-width: 1215px) and (min-width: 421px) {
+  /* Adjust scroll indicator position to avoid overlap */
+  .scroll-indicator-container {
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: none; /* NEW: Hide scroll indicator below 1215px */
+  }
+}
+
+/* Adjustments for screens between 515px and 420px */
+@media (max-width: 515px) and (min-width: 421px) {
+  /* Adjust profile picture size and positioning */
+  .profile-picture {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .profile-picture-img {
+    transform: scale(1.7) translate(10%, 20%);
+  }
+
+  .intro-text-container {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Adjustments for screens at 420px and below */
+@media (max-width: 420px) {
+  /* Ensure profile picture stays within viewport */
+  .profile-picture {
+    width: 16rem;
+    height: 16rem;
+  }
+
+  .profile-picture-img {
+    transform: scale(1.5) translate(0%, 0%); /* NEW: Adjust transform to prevent cropping */
+  }
+
+  .intro-heading {
+    font-size: 4rem; /* Reduce heading size */
+  }
+
+  .intro-subheading {
+    font-size: 2rem; /* Reduce subheading size */
+  }
+
+  .social-icon {
+    width: 4rem; /* Reduce social icon size */
+    height: 4rem;
+    font-size: 2.5rem;
+  }
+
+  .social-media-icons {
+    gap: 1rem; /* Reduce gap between icons */
+    justify-content: center;
+  }
+
+  .scroll-indicator-container {
+    display: none; /* Ensure scroll indicator is hidden on small screens */
+  }
+
+  .intro-text-container {
+    max-width: 90%; /* Adjust text container width */
+  }
+}
+
+/* NEW: Hide scroll indicator below 1215px */
+@media (max-width: 1215px) {
+  .scroll-indicator-container {
+    display: none; /* NEW */
+  }
+}
+
+/* NEW: Ensure profile picture top is not cropped below 420px */
+@media (max-width: 420px) {
+  .profile-picture-img {
+    transform: scale(1.5) translate(0%, 0%); /* NEW */
   }
 }
