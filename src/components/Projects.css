@@ -14,7 +14,7 @@
 .projects-heading {
   font-size: 4.5rem;
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #1f2b6c;
   text-align: left;
   width: 100%;
@@ -34,7 +34,7 @@
 }
 
 .projects-content {
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 /* Project Card Styles */
