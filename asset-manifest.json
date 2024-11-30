@@ -1,15 +1,24 @@
 {
   "files": {
-    "main.css": "/alcy-portfolio/static/css/main.1358a9b1.css",
-    "main.js": "/alcy-portfolio/static/js/main.da318f91.js",
-    "static/js/453.657d97c4.chunk.js": "/alcy-portfolio/static/js/453.657d97c4.chunk.js",
+    "main.css": "/alcy-portfolio/static/css/main.1c9a2e93.css",
+    "main.js": "/alcy-portfolio/static/js/main.80a020d3.js",
+    "static/js/511.48f77360.chunk.js": "/alcy-portfolio/static/js/511.48f77360.chunk.js",
+    "static/media/movies1.png": "/alcy-portfolio/static/media/movies1.5aaca740da6cb123d868.png",
+    "static/media/movies2.png": "/alcy-portfolio/static/media/movies2.ea3a2fb20d856be77dfb.png",
+    "static/media/travel-log.png": "/alcy-portfolio/static/media/travel-log.1e29b636a023118e985d.png",
+    "static/media/pure-health.png": "/alcy-portfolio/static/media/pure-health.626853420981c927dabe.png",
+    "static/media/profile-picture.jpg": "/alcy-portfolio/static/media/profile-picture.0d4c171669795805a34e.jpg",
+    "static/media/travel-log-map.png": "/alcy-portfolio/static/media/travel-log-map.503d56717410f0c3d47b.png",
+    "static/media/travel-log-view.png": "/alcy-portfolio/static/media/travel-log-view.05fd989f7c3af081fd97.png",
+    "static/media/movies4.png": "/alcy-portfolio/static/media/movies4.6ec7287c20a5133eaebd.png",
+    "static/media/alcy-logo.png": "/alcy-portfolio/static/media/alcy-logo.d021b9710812938e040e.png",
     "index.html": "/alcy-portfolio/index.html",
-    "main.1358a9b1.css.map": "/alcy-portfolio/static/css/main.1358a9b1.css.map",
-    "main.da318f91.js.map": "/alcy-portfolio/static/js/main.da318f91.js.map",
-    "453.657d97c4.chunk.js.map": "/alcy-portfolio/static/js/453.657d97c4.chunk.js.map"
+    "main.1c9a2e93.css.map": "/alcy-portfolio/static/css/main.1c9a2e93.css.map",
+    "main.80a020d3.js.map": "/alcy-portfolio/static/js/main.80a020d3.js.map",
+    "511.48f77360.chunk.js.map": "/alcy-portfolio/static/js/511.48f77360.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1358a9b1.css",
-    "static/js/main.da318f91.js"
+    "static/css/main.1c9a2e93.css",
+    "static/js/main.80a020d3.js"
   ]
 }
