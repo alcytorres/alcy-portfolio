@@ -10,19 +10,19 @@ import travelLog from "../assets/travel-log.png";
 // Import the PureHealth image
 import pureHealthImage from "../assets/pure-health.png";
 
-// NEW: Import the images for the Movies Watchlist carousel
+// Import the images for the Movies Watchlist carousel
 import movies1 from "../assets/movies1.png";
 import movies2 from "../assets/movies2.png";
 import movies4 from "../assets/movies4.png";
 
 function Projects() {
-  // NEW: Initialize carousel indices for projects with carousels
+  // Initialize carousel indices for projects with carousels
   const [carouselIndices, setCarouselIndices] = useState({});
 
   // Images array for the Travel Log carousel
   const travelLogImages = [travelLogMap, travelLog, travelLogView];
 
-  // NEW: Images array for the Movies Watchlist carousel
+  // Images array for the Movies Watchlist carousel
   const moviesImages = [movies1, movies2, movies4];
 
   // Updated project list
@@ -68,7 +68,7 @@ function Projects() {
     },
     {
       title: "PureHealth",
-      subTitle: " (Launching in 2025)", // NEW: Subtitle for PureHealth
+      subTitle: " (Launching in 2025)", // Subtitle for PureHealth
       description: (
         <div className="project-description">
           <p>
@@ -86,7 +86,7 @@ function Projects() {
     },
   ];
 
-  // NEW: Set initial carousel indices
+  // Set initial carousel indices
   useEffect(() => {
     const initialIndices = {};
     projectList.forEach((project) => {
@@ -99,10 +99,13 @@ function Projects() {
 
   return (
     <section id="projects" className="projects-section">
-      <h2 className="projects-heading">
-        Projects
-        <div className="projects-header-line"></div>
-      </h2>
+      {/* NEW: Wrap heading in a container */}
+      <div className="projects-heading-container"> {/* NEW */}
+        <h2 className="projects-heading">
+          Projects
+          <div className="projects-header-line"></div>
+        </h2>
+      </div> {/* NEW */}
       <div className="projects-content">
         {projectList.map((project, index) => (
           <div
@@ -139,7 +142,7 @@ function Projects() {
                     }`}
                     className="carousel-image"
                   />
-                  {/* NEW: Arrows inside the carousel-container, beneath the image */}
+                  {/* Arrows inside the carousel-container, beneath the image */}
                   <div className="carousel-controls">
                     <button
                       className="carousel-arrow left-arrow"
@@ -171,28 +174,31 @@ function Projects() {
                   </div>
                 </div>
                 {/* Project Info */}
-                <div
-                  className={`project-info ${
-                    project.title === "Movies Watchlist"
-                      ? "movies-watchlist-info"
-                      : project.title === "Travel Log"
-                      ? "travel-log-info"
-                      : ""
-                  }`}
-                >
-                  <h3 className="project-title">{project.title}</h3>
-                  {project.description}
-                  {project.githubLink && (
-                    <a
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="synthwave-button"
-                    >
-                      {`View ${project.title}`}
-                    </a>
-                  )}
-                </div>
+                {/* NEW: Wrap project info in a container */}
+                <div className="project-content-container"> {/* NEW */}
+                  <div
+                    className={`project-info ${
+                      project.title === "Movies Watchlist"
+                        ? "movies-watchlist-info"
+                        : project.title === "Travel Log"
+                        ? "travel-log-info"
+                        : ""
+                    }`}
+                  >
+                    <h3 className="project-title">{project.title}</h3>
+                    {project.description}
+                    {project.githubLink && (
+                      <a
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="synthwave-button"
+                      >
+                        {`View ${project.title}`}
+                      </a>
+                    )}
+                  </div>
+                </div> {/* NEW */}
               </div>
             ) : project.singleImage ? (
               <div className="carousel-and-info">
@@ -203,21 +209,24 @@ function Projects() {
                     className="carousel-image"
                   />
                 </div>
-                <div className="project-info purehealth-info">
-                  <h3 className="project-title">
-                    {project.title}
-                    {project.subTitle && (
-                      <span className="project-subtitle">{project.subTitle}</span> // NEW
-                    )}
-                  </h3>
-                  {project.description}
-                </div>
+                {/* NEW: Wrap project info in a container */}
+                <div className="project-content-container"> {/* NEW */}
+                  <div className="project-info purehealth-info">
+                    <h3 className="project-title">
+                      {project.title}
+                      {project.subTitle && (
+                        <span className="project-subtitle">{project.subTitle}</span>
+                      )}
+                    </h3>
+                    {project.description}
+                  </div>
+                </div> {/* NEW */}
               </div>
             ) : (
               <>
                 <h3 className="project-title">{project.title}</h3>
                 {project.subTitle && (
-                  <span className="project-subtitle">{project.subTitle}</span> // NEW
+                  <span className="project-subtitle">{project.subTitle}</span>
                 )}
                 <p className="project-description">{project.description}</p>
               </>

@@ -12,14 +12,17 @@
   margin: auto;
 }
 
-/* Heading Styles */
+/* NEW: Center the heading container */
+.projects-heading-container { /* NEW */
+  width: 100%; /* NEW */
+  text-align: left; /* NEW */
+}
+
 .projects-heading {
   font-size: 4.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
   color: #1f2b6c;
-  text-align: left;
-  width: 100%;
   margin-top: 200px;
   position: relative;
 }
@@ -34,14 +37,14 @@
   max-width: 6.5rem;
 }
 
-/* NEW: Add margins to projects-heading and projects-header-line for smaller screens */
+/* NEW: Adjust heading container on small screens */
 @media (max-width: 768px) { /* NEW */
-  .projects-heading { /* NEW */
-    margin: 0 1rem; /* NEW: Equal left and right margins */
-    margin-top: 150px; /* NEW: Adjusted top margin */
+  .projects-heading-container { /* NEW */
+    max-width: 90%; /* NEW */
+    margin: 0 auto; /* NEW */
   }
-  .projects-header-line { /* NEW */
-    margin-left: 1rem; /* NEW: Align with heading margins */
+  .projects-heading { /* NEW */
+    margin-top: 150px; /* NEW */
   }
 }
 
@@ -49,7 +52,13 @@
   margin-top: 1rem;
 }
 
-/* Project Card Styles */
+/* NEW: Project content container styles */
+.project-content-container { /* NEW */
+  max-width: 90%; /* NEW */
+  margin: 0 auto; /* NEW */
+  text-align: left; /* NEW */
+}
+
 .project-card {
   margin-bottom: 3rem;
   width: 100%;
@@ -76,9 +85,9 @@
   text-align: left;
   margin: 0;
   margin-top: 0;
-  /* NEW: Add equal left and right margins for mobile */
-  margin-left: 1rem; /* NEW */
-  margin-right: 1rem; /* NEW */
+  /* REMOVE: Remove mobile margins */
+  /* margin-left: 1rem; */ /* REMOVE */
+  /* margin-right: 1rem; */ /* REMOVE */
 }
 
 .project-description {
@@ -89,9 +98,9 @@
   line-height: 1.7;
   text-align: left;
   max-width: 100%;
-  /* NEW: Add equal left and right margins for mobile */
-  margin-left: 1rem; /* NEW */
-  margin-right: 1rem; /* NEW */
+  /* REMOVE: Remove mobile margins */
+  /* margin-left: 1rem; */ /* REMOVE */
+  /* margin-right: 1rem; */ /* REMOVE */
 }
 
 /* Project Info */
@@ -100,9 +109,13 @@
   margin-left: 2rem;
   max-width: 900px;
   width: 55%;
-  /* NEW: Add equal left and right margins for mobile */
-  margin-left: 1rem; /* NEW */
-  margin-right: 1rem; /* NEW */
+}
+
+@media (max-width: 768px) { /* NEW */
+  .project-info { /* NEW */
+    margin-left: 0; /* NEW */
+    width: 100%; /* NEW */
+  }
 }
 
 /* Buttons */
@@ -129,16 +142,9 @@
   box-shadow: 0 4px 10px rgba(106, 0, 244, 0.5);
   transition: all 0.3s ease;
   margin-top: 30px;
-  /* NEW: Ensure buttons have equal left and right margins on mobile */
-  margin-left: 1rem; /* NEW */
-  margin-right: 1rem; /* NEW */
-}
-
-.synthwave-button:hover {
-  background: #d3e4ff;
-  color: #6a00f4;
-  box-shadow: 0 6px 15px rgba(106, 0, 244, 0.7);
-  transform: scale(1.05);
+  /* REMOVE: Remove mobile margins */
+  /* margin-left: 1rem; */ /* REMOVE */
+  /* margin-right: 1rem; */ /* REMOVE */
 }
 
 /* Carousel and Info Container */
@@ -149,12 +155,20 @@
   justify-content: center;
   flex-wrap: nowrap;
   margin: 0;
-  /* NEW: Add equal left and right margins for mobile */
-  margin-left: 1rem; /* NEW */
-  margin-right: 1rem; /* NEW */
+  /* REMOVE: Remove mobile margins */
+  /* margin-left: 1rem; */ /* REMOVE */
+  /* margin-right: 1rem; */ /* REMOVE */
 }
 
-/* Carousel Container */
+@media (max-width: 768px) { /* NEW */
+  .carousel-and-info { /* NEW */
+    flex-direction: column; /* Already existing */
+    align-items: center; /* Already existing */
+    max-width: 90%; /* NEW */
+    margin: 0 auto; /* NEW */
+  }
+}
+
 .carousel-container,
 .video-container {
   position: relative;
@@ -166,7 +180,13 @@
   align-items: center;
 }
 
-/* Carousel Image */
+@media (max-width: 768px) { /* NEW */
+  .carousel-container,
+  .video-container { /* NEW */
+    width: 100%; /* NEW */
+  }
+}
+
 .carousel-image,
 .video-placeholder {
   width: 100%;
@@ -195,27 +215,17 @@
   cursor: pointer;
   user-select: none;
   margin: 0 1rem;
-  /* NEW: Increase touch target size */
-  padding: 0.5rem; /* NEW */
+  /* Increase touch target size */
+  padding: 0.5rem;
 }
 
 .carousel-arrow:hover {
   color: #74bcc4;
 }
 
-/* NEW: Subtitle Styles */
-.project-subtitle {
-  font-weight: normal; /* Ensure the subtitle is not bold */
-  font-size: 2.0rem; /* Match the size to keep it consistent */
-  color: #1f2b6c; /* Optional: Adjust color for distinction */
-  margin-left: 0.5rem; /* Add some spacing from the title */
-}
-
-
-/* NEW: Ensure arrows are not too small on mobile */
-@media (max-width: 768px) { /* NEW */
-  .carousel-arrow { /* NEW */
-    font-size: 2.5rem; /* NEW: Increase arrow size */
+@media (max-width: 768px) {
+  .carousel-arrow {
+    font-size: 2.5rem;
   }
 }
 
@@ -227,69 +237,29 @@
   margin: 2rem 0;
 }
 
-/* NEW: Hide separator lines below 650px width */
-@media (max-width: 650px) { /* NEW */
-  .project-separator { /* NEW */
-    display: none; /* NEW */
+/* Hide separator lines below 650px width */
+@media (max-width: 650px) {
+  .project-separator {
+    display: none;
   }
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .carousel-and-info {
-    flex-direction: column;
-    align-items: center;
-    /* NEW: Remove margins to avoid double margins */
-    margin-left: 0; /* NEW */
-    margin-right: 0; /* NEW */
-  }
-
-  .carousel-container,
-  .video-container,
-  .project-info {
-    width: 100%;
-    max-width: none;
-  }
-
-  .project-info {
-    margin-left: 0;
-    margin-top: 1rem;
-  }
-
   .projects-heading {
-    font-size: 3rem; /* NEW: Adjust heading size for mobile */
+    font-size: 3rem;
   }
 
   .project-title {
-    font-size: 2rem; /* NEW: Adjust project title size */
+    font-size: 2rem;
   }
 
   .project-description {
-    font-size: 1rem; /* NEW: Adjust description font size */
+    font-size: 1rem;
   }
 
   .synthwave-button {
-    font-size: 1rem; /* NEW: Adjust button font size */
-    padding: 8px 16px; /* NEW: Adjust button padding */
+    font-size: 1rem;
+    padding: 8px 16px;
   }
 }
-
-/* Reset Styles for Headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-}
-
-/* Remove default list styling */
-ul,
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
