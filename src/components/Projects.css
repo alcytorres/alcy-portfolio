@@ -1,3 +1,5 @@
+/* Projects.css */
+
 /* Global Section Styles */
 .projects-section {
   text-align: center;
@@ -22,7 +24,6 @@
   position: relative;
 }
 
-/* Line under Projects header */
 .projects-header-line {
   width: calc(100% - 0.3rem);
   height: 3px;
@@ -31,6 +32,17 @@
   bottom: -15px;
   left: 0;
   max-width: 6.5rem;
+}
+
+/* NEW: Add margins to projects-heading and projects-header-line for smaller screens */
+@media (max-width: 768px) { /* NEW */
+  .projects-heading { /* NEW */
+    margin: 0 1rem; /* NEW: Equal left and right margins */
+    margin-top: 150px; /* NEW: Adjusted top margin */
+  }
+  .projects-header-line { /* NEW */
+    margin-left: 1rem; /* NEW: Align with heading margins */
+  }
 }
 
 .projects-content {
@@ -49,40 +61,12 @@
 }
 
 /* Individual Project Cards */
-.movies-watchlist-card {
-  margin: 2rem auto;
-  padding: 0;
-}
-
-.travel-log-card {
-  margin: 2rem auto;
-  padding: 0;
-  position: relative;
-}
-
+.movies-watchlist-card,
+.travel-log-card,
 .purehealth-card {
   margin: 2rem auto;
   padding: 0;
   position: relative;
-}
-
-.purehealth-carousel {
-  width: 600px;
-  height: 350px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background-color: #f4f9fc;
-}
-
-/* PureHealth Image - Adjust Scaling */
-.purehealth-carousel img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  display: block;
 }
 
 /* Project Title and Description */
@@ -92,6 +76,9 @@
   text-align: left;
   margin: 0;
   margin-top: 0;
+  /* NEW: Add equal left and right margins for mobile */
+  margin-left: 1rem; /* NEW */
+  margin-right: 1rem; /* NEW */
 }
 
 .project-description {
@@ -102,6 +89,9 @@
   line-height: 1.7;
   text-align: left;
   max-width: 100%;
+  /* NEW: Add equal left and right margins for mobile */
+  margin-left: 1rem; /* NEW */
+  margin-right: 1rem; /* NEW */
 }
 
 /* Project Info */
@@ -110,102 +100,9 @@
   margin-left: 2rem;
   max-width: 900px;
   width: 55%;
-}
-
-/* Specific classes for project info sections */
-.movies-watchlist-info {
-  margin-top: 16px;
-}
-
-.travel-log-info {
-  margin-top: -25px;
-}
-
-.purehealth-info {
-  margin-top: -25px;
-}
-
-/* Specific classes for video and carousel containers */
-/* (No changes to these as per your request) */
-
-/* Carousel and Info Container */
-.carousel-and-info {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  flex-wrap: nowrap;
-  margin: 0;
-}
-
-/* Carousel Container */
-.carousel-container,
-.video-container {
-  position: relative;
-  width: 50%;
-  max-width: 600px;
-  overflow: hidden;
-  display: flex; /* NEW: Added to enable flex alignment */
-  flex-direction: column; /* NEW: Stack image and controls vertically */
-  align-items: center; /* NEW: Center items horizontally */
-}
-
-.carousel-image,
-.video-placeholder {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Adjusted margins around the carousel image */
-.carousel-image {
-  margin-top: 2rem;
-  margin-bottom: 0rem; /* NEW: Removed bottom margin to align controls */
-}
-
-/* NEW: Carousel Controls (arrows inside the carousel-container, beneath the image) */
-.carousel-controls { /* NEW */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem; /* NEW: Spacing above arrows */
-}
-
-.carousel-arrow { /* NEW */
-  font-size: 2rem;
-  color: #1f2b6c;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  user-select: none;
-  margin: 0 1rem; /* NEW: Space between arrows */
-}
-
-.carousel-arrow:hover { /* NEW */
-  color: #74bcc4;
-}
-
-
-/* Specific classes for video and carousel containers */
-.movies-watchlist-video {
-  margin-top: 0px;
-}
-
-.travel-log-carousel {
-  margin-top: -42px;
-}
-
-/* NEW: PureHealth carousel styles, matching Travel Log */
-.purehealth-carousel {
-  margin-top: -42px; /* NEW: Match margin with Travel Log */
-}
-
-/* Project Separator */
-.project-separator {
-  width: 100%;
-  height: 1.5px;
-  background-color: #8d95b6;
-  margin: 2rem 0;
+  /* NEW: Add equal left and right margins for mobile */
+  margin-left: 1rem; /* NEW */
+  margin-right: 1rem; /* NEW */
 }
 
 /* Buttons */
@@ -232,6 +129,9 @@
   box-shadow: 0 4px 10px rgba(106, 0, 244, 0.5);
   transition: all 0.3s ease;
   margin-top: 30px;
+  /* NEW: Ensure buttons have equal left and right margins on mobile */
+  margin-left: 1rem; /* NEW */
+  margin-right: 1rem; /* NEW */
 }
 
 .synthwave-button:hover {
@@ -239,6 +139,139 @@
   color: #6a00f4;
   box-shadow: 0 6px 15px rgba(106, 0, 244, 0.7);
   transform: scale(1.05);
+}
+
+/* Carousel and Info Container */
+.carousel-and-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin: 0;
+  /* NEW: Add equal left and right margins for mobile */
+  margin-left: 1rem; /* NEW */
+  margin-right: 1rem; /* NEW */
+}
+
+/* Carousel Container */
+.carousel-container,
+.video-container {
+  position: relative;
+  width: 50%;
+  max-width: 600px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Carousel Image */
+.carousel-image,
+.video-placeholder {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel-image {
+  margin-top: 1.0rem;
+  margin-bottom: 0rem;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.carousel-arrow {
+  font-size: 2rem;
+  color: #1f2b6c;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  margin: 0 1rem;
+  /* NEW: Increase touch target size */
+  padding: 0.5rem; /* NEW */
+}
+
+.carousel-arrow:hover {
+  color: #74bcc4;
+}
+
+/* NEW: Subtitle Styles */
+.project-subtitle {
+  font-weight: normal; /* Ensure the subtitle is not bold */
+  font-size: 2.0rem; /* Match the size to keep it consistent */
+  color: #1f2b6c; /* Optional: Adjust color for distinction */
+  margin-left: 0.5rem; /* Add some spacing from the title */
+}
+
+
+/* NEW: Ensure arrows are not too small on mobile */
+@media (max-width: 768px) { /* NEW */
+  .carousel-arrow { /* NEW */
+    font-size: 2.5rem; /* NEW: Increase arrow size */
+  }
+}
+
+/* Project Separator */
+.project-separator {
+  width: 100%;
+  height: 1.5px;
+  background-color: #8d95b6;
+  margin: 2rem 0;
+}
+
+/* NEW: Hide separator lines below 650px width */
+@media (max-width: 650px) { /* NEW */
+  .project-separator { /* NEW */
+    display: none; /* NEW */
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .carousel-and-info {
+    flex-direction: column;
+    align-items: center;
+    /* NEW: Remove margins to avoid double margins */
+    margin-left: 0; /* NEW */
+    margin-right: 0; /* NEW */
+  }
+
+  .carousel-container,
+  .video-container,
+  .project-info {
+    width: 100%;
+    max-width: none;
+  }
+
+  .project-info {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .projects-heading {
+    font-size: 3rem; /* NEW: Adjust heading size for mobile */
+  }
+
+  .project-title {
+    font-size: 2rem; /* NEW: Adjust project title size */
+  }
+
+  .project-description {
+    font-size: 1rem; /* NEW: Adjust description font size */
+  }
+
+  .synthwave-button {
+    font-size: 1rem; /* NEW: Adjust button font size */
+    padding: 8px 16px; /* NEW: Adjust button padding */
+  }
 }
 
 /* Reset Styles for Headings */
@@ -252,20 +285,11 @@ h6 {
   padding: 0;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .carousel-and-info {
-    flex-direction: column;
-    align-items: center;
-  }
-  .carousel-container,
-  .video-container,
-  .project-info {
-    width: 100%;
-    max-width: none;
-  }
-  .project-info {
-    margin-left: 0;
-    margin-top: 1rem;
-  }
+/* Remove default list styling */
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
