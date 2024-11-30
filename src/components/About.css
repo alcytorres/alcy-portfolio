@@ -134,10 +134,10 @@
   }
 }
 
-/* NEW: Responsive adjustments for screen widths under 1215px */
-@media (max-width: 1215px) { /* NEW */
-  .about-section { /* NEW */
-    margin-top: 10px; /* NEW: Decreased margin-top to reduce space */
-    margin-left: 0; /* NEW: Remove left margin for smaller screens */
+/* Responsive adjustments for screen widths under 1215px */
+@media (max-width: 1215px) { 
+  .about-section { 
+    margin-top: 10px; /* Decreased margin-top to reduce space */
+    margin-left: 0; /* Remove left margin for smaller screens */
   }
 }

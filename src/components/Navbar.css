@@ -55,11 +55,7 @@
 
 /* Get in Touch Button */
 .get-in-touch {
-  /* REMOVE: position: absolute; */
-  /* REMOVE: top: 1.75rem; */
-  /* REMOVE: right: 1.6rem; */
-  /* NEW: Align to the right within the navbar */
-  margin-left: auto; /* NEW */
+  margin-left: auto; 
   z-index: 102;
 }
 
@@ -191,25 +187,19 @@
   }
 }
 
-/* NEW: Responsive Design */
+/* Responsive Design */
 @media (max-width: 1215px) {
-  /* NEW: Adjust body top padding to prevent overlap */
+  /* Adjust body top padding to prevent overlap */
   body {
     padding-top: 70px; /* Adjust this value based on your navbar height */
   }
 }
 
 @media (max-width: 768px) {
-  /* NEW: Adjust menu button and get in touch button positioning */
+  /* Adjust menu button and get in touch button positioning */
   .menu-button {
     font-size: 1.4rem;
   }
-
-  /* REMOVE: No need to adjust top position anymore */
-  /* .get-in-touch {
-    top: 1rem; /* REMOVE */
-    /* right: 1rem; /* REMOVE */
-  /* } */
 
   .get-in-touch-link {
     font-size: 1.2rem;

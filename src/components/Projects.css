@@ -325,19 +325,19 @@
     padding: 8px 16px;
   }
 
-  /* NEW: Add margin-top to Travel Log carousel-container */
-  .travel-log-carousel { /* NEW */
-    margin-top: 50px; /* NEW */
+  /* Add margin-top to Travel Log carousel-container */
+  .travel-log-carousel { 
+    margin-top: 50px; 
   }
 
-  /* NEW: Add margin-top to PureHealth carousel-container */
-  .purehealth-carousel { /* NEW */
-    margin-top: 50px; /* NEW */
+  /* Add margin-top to PureHealth carousel-container */
+  .purehealth-carousel { 
+    margin-top: 50px; 
   }
 
-  /* NEW: Add space below PureHealth image */
-  .purehealth-carousel-image { /* NEW */
-    margin-bottom: 35px; /* NEW */
+  /* Add space below PureHealth image */
+  .purehealth-carousel-image { 
+    margin-bottom: 35px; 
   }
 }
 
