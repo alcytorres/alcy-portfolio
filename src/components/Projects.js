@@ -99,13 +99,13 @@ function Projects() {
 
   return (
     <section id="projects" className="projects-section">
-      {/* NEW: Wrap heading in a container */}
-      <div className="projects-heading-container"> {/* NEW */}
+      {/* Wrap heading in a container */}
+      <div className="projects-heading-container">
         <h2 className="projects-heading">
           Projects
           <div className="projects-header-line"></div>
         </h2>
-      </div> {/* NEW */}
+      </div>
       <div className="projects-content">
         {projectList.map((project, index) => (
           <div
@@ -174,8 +174,7 @@ function Projects() {
                   </div>
                 </div>
                 {/* Project Info */}
-                {/* NEW: Wrap project info in a container */}
-                <div className="project-content-container"> {/* NEW */}
+                <div className="project-content-container">
                   <div
                     className={`project-info ${
                       project.title === "Movies Watchlist"
@@ -198,7 +197,7 @@ function Projects() {
                       </a>
                     )}
                   </div>
-                </div> {/* NEW */}
+                </div>
               </div>
             ) : project.singleImage ? (
               <div className="carousel-and-info">
@@ -206,11 +205,10 @@ function Projects() {
                   <img
                     src={project.image}
                     alt={`${project.title}`}
-                    className="carousel-image"
+                    className="carousel-image purehealth-carousel-image" /* NEW */
                   />
                 </div>
-                {/* NEW: Wrap project info in a container */}
-                <div className="project-content-container"> {/* NEW */}
+                <div className="project-content-container">
                   <div className="project-info purehealth-info">
                     <h3 className="project-title">
                       {project.title}
@@ -220,7 +218,7 @@ function Projects() {
                     </h3>
                     {project.description}
                   </div>
-                </div> {/* NEW */}
+                </div>
               </div>
             ) : (
               <>

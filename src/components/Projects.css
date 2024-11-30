@@ -82,81 +82,81 @@
 .project-info {
   margin: 0;
   margin-left: 2rem;
-  margin-right: 2rem; /* NEW */
-  max-width: 1000px; /* NEW */
-  width: 83%; /* NEW */
+  margin-right: 2rem;
+  max-width: 1000px;
+  width: 96%;
 }
 
 @media (max-width: 768px) {
   .project-info {
     margin-left: 0;
-    margin-right: 0; /* NEW */
+    margin-right: 0;
     width: 100%;
   }
 }
 
-/* NEW: Specific styles for each project */
+/* Specific styles for each project */
 
 /* Movies Watchlist Styles */
-.movies-watchlist-carousel-container { /* NEW */
+.movies-watchlist-carousel-container {
   /* Your styles here */
 }
 
-.movies-watchlist-carousel-image { /* NEW */
+.movies-watchlist-carousel-image {
   /* Your styles here */
 }
 
-.movies-watchlist-title { /* NEW */
+.movies-watchlist-title {
   /* You can adjust font-size, color, etc. */
 }
 
-.movies-watchlist-description { /* NEW */
+.movies-watchlist-description {
   /* Adjust description styles if needed */
 }
 
-.movies-watchlist-button { /* NEW */
+.movies-watchlist-button {
   /* Adjust button styles if needed */
 }
 
 /* Travel Log Styles */
-.travel-log-carousel-container { /* NEW */
+.travel-log-carousel-container {
   /* Your styles here */
 }
 
-.travel-log-carousel-image { /* NEW */
+.travel-log-carousel-image {
   /* Your styles here */
 }
 
-.travel-log-title { /* NEW */
+.travel-log-title {
   /* You can adjust font-size, color, etc. */
 }
 
-.travel-log-description { /* NEW */
+.travel-log-description {
   /* Adjust description styles if needed */
 }
 
-.travel-log-button { /* NEW */
+.travel-log-button {
   /* Adjust button styles if needed */
 }
 
 /* PureHealth Styles */
-.purehealth-carousel-container { /* NEW */
+.purehealth-carousel-container {
   /* Your styles here */
 }
 
-.purehealth-carousel-image { /* NEW */
+.purehealth-carousel-image {
   /* Your styles here */
 }
 
-.purehealth-title { /* NEW */
+.purehealth-title {
   /* You can adjust font-size, color, etc. */
 }
 
-.purehealth-description { /* NEW */
+.purehealth-description {
   /* Adjust description styles if needed */
 }
 
-.purehealth-button { /* NEW */
+.purehealth-button {
   /* Adjust button styles if needed */
 }
 
@@ -324,4 +324,20 @@
     font-size: 1rem;
     padding: 8px 16px;
   }
+
+  /* NEW: Add margin-top to Travel Log carousel-container */
+  .travel-log-carousel { /* NEW */
+    margin-top: 50px; /* NEW */
+  }
+
+  /* NEW: Add margin-top to PureHealth carousel-container */
+  .purehealth-carousel { /* NEW */
+    margin-top: 50px; /* NEW */
+  }
+
+  /* NEW: Add space below PureHealth image */
+  .purehealth-carousel-image { /* NEW */
+    margin-bottom: 35px; /* NEW */
+  }
 }
+
