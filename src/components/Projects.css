@@ -12,10 +12,10 @@
   margin: auto;
 }
 
-/* NEW: Center the heading container */
-.projects-heading-container { /* NEW */
-  width: 100%; /* NEW */
-  text-align: left; /* NEW */
+/* Center the heading container */
+.projects-heading-container {
+  width: 100%;
+  text-align: left;
 }
 
 .projects-heading {
@@ -37,14 +37,14 @@
   max-width: 6.5rem;
 }
 
-/* NEW: Adjust heading container on small screens */
-@media (max-width: 768px) { /* NEW */
-  .projects-heading-container { /* NEW */
-    max-width: 90%; /* NEW */
-    margin: 0 auto; /* NEW */
+/* Adjust heading container on small screens */
+@media (max-width: 768px) {
+  .projects-heading-container {
+    max-width: 90%;
+    margin: 0 auto;
   }
-  .projects-heading { /* NEW */
-    margin-top: 150px; /* NEW */
+  .projects-heading {
+    margin-top: 150px;
   }
 }
 
@@ -52,11 +52,11 @@
   margin-top: 1rem;
 }
 
-/* NEW: Project content container styles */
-.project-content-container { /* NEW */
-  max-width: 90%; /* NEW */
-  margin: 0 auto; /* NEW */
-  text-align: left; /* NEW */
+/* Project content container styles */
+.project-content-container {
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: left;
 }
 
 .project-card {
@@ -78,18 +78,98 @@
   position: relative;
 }
 
-/* Project Title and Description */
+/* Project Info */
+.project-info {
+  margin: 0;
+  margin-left: 2rem;
+  margin-right: 2rem; /* NEW */
+  max-width: 1000px; /* NEW */
+  width: 83%; /* NEW */
+}
+
+@media (max-width: 768px) {
+  .project-info {
+    margin-left: 0;
+    margin-right: 0; /* NEW */
+    width: 100%;
+  }
+}
+
+/* NEW: Specific styles for each project */
+
+/* Movies Watchlist Styles */
+.movies-watchlist-carousel-container { /* NEW */
+  /* Your styles here */
+}
+
+.movies-watchlist-carousel-image { /* NEW */
+  /* Your styles here */
+}
+
+.movies-watchlist-title { /* NEW */
+  /* You can adjust font-size, color, etc. */
+}
+
+.movies-watchlist-description { /* NEW */
+  /* Adjust description styles if needed */
+}
+
+.movies-watchlist-button { /* NEW */
+  /* Adjust button styles if needed */
+}
+
+/* Travel Log Styles */
+.travel-log-carousel-container { /* NEW */
+  /* Your styles here */
+}
+
+.travel-log-carousel-image { /* NEW */
+  /* Your styles here */
+}
+
+.travel-log-title { /* NEW */
+  /* You can adjust font-size, color, etc. */
+}
+
+.travel-log-description { /* NEW */
+  /* Adjust description styles if needed */
+}
+
+.travel-log-button { /* NEW */
+  /* Adjust button styles if needed */
+}
+
+/* PureHealth Styles */
+.purehealth-carousel-container { /* NEW */
+  /* Your styles here */
+}
+
+.purehealth-carousel-image { /* NEW */
+  /* Your styles here */
+}
+
+.purehealth-title { /* NEW */
+  /* You can adjust font-size, color, etc. */
+}
+
+.purehealth-description { /* NEW */
+  /* Adjust description styles if needed */
+}
+
+.purehealth-button { /* NEW */
+  /* Adjust button styles if needed */
+}
+
+/* Project Title */
 .project-title {
   font-size: 2.2rem;
   font-weight: bold;
   text-align: left;
   margin: 0;
   margin-top: 0;
-  /* REMOVE: Remove mobile margins */
-  /* margin-left: 1rem; */ /* REMOVE */
-  /* margin-right: 1rem; */ /* REMOVE */
 }
 
+/* Project Description */
 .project-description {
   margin: 0;
   margin-top: 15px;
@@ -98,24 +178,6 @@
   line-height: 1.7;
   text-align: left;
   max-width: 100%;
-  /* REMOVE: Remove mobile margins */
-  /* margin-left: 1rem; */ /* REMOVE */
-  /* margin-right: 1rem; */ /* REMOVE */
-}
-
-/* Project Info */
-.project-info {
-  margin: 0;
-  margin-left: 2rem;
-  max-width: 900px;
-  width: 55%;
-}
-
-@media (max-width: 768px) { /* NEW */
-  .project-info { /* NEW */
-    margin-left: 0; /* NEW */
-    width: 100%; /* NEW */
-  }
 }
 
 /* Buttons */
@@ -142,9 +204,13 @@
   box-shadow: 0 4px 10px rgba(106, 0, 244, 0.5);
   transition: all 0.3s ease;
   margin-top: 30px;
-  /* REMOVE: Remove mobile margins */
-  /* margin-left: 1rem; */ /* REMOVE */
-  /* margin-right: 1rem; */ /* REMOVE */
+}
+
+.synthwave-button:hover {
+  background: #d3e4ff;
+  color: #6a00f4;
+  box-shadow: 0 6px 15px rgba(106, 0, 244, 0.7);
+  transform: scale(1.05);
 }
 
 /* Carousel and Info Container */
@@ -155,24 +221,21 @@
   justify-content: center;
   flex-wrap: nowrap;
   margin: 0;
-  /* REMOVE: Remove mobile margins */
-  /* margin-left: 1rem; */ /* REMOVE */
-  /* margin-right: 1rem; */ /* REMOVE */
 }
 
-@media (max-width: 768px) { /* NEW */
-  .carousel-and-info { /* NEW */
-    flex-direction: column; /* Already existing */
-    align-items: center; /* Already existing */
-    max-width: 90%; /* NEW */
-    margin: 0 auto; /* NEW */
+@media (max-width: 768px) {
+  .carousel-and-info {
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
   }
 }
 
 .carousel-container,
 .video-container {
   position: relative;
-  width: 50%;
+  width: 90%;
   max-width: 600px;
   overflow: hidden;
   display: flex;
@@ -180,10 +243,10 @@
   align-items: center;
 }
 
-@media (max-width: 768px) { /* NEW */
+@media (max-width: 768px) {
   .carousel-container,
-  .video-container { /* NEW */
-    width: 100%; /* NEW */
+  .video-container {
+    width: 100%;
   }
 }
 
@@ -215,7 +278,6 @@
   cursor: pointer;
   user-select: none;
   margin: 0 1rem;
-  /* Increase touch target size */
   padding: 0.5rem;
 }
 
