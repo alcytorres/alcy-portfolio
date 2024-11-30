@@ -1,3 +1,5 @@
+/* Contact.css */
+
 /* Contact Section */
 .contact-section {
   min-height: 60vh; /* Slightly reduce height */
@@ -33,7 +35,8 @@
 .contact-description {
   color: #1f2b6c;
   text-align: center;
-  max-width: 40rem;
+  max-width: 90%; /* NEW: Adjust max-width to match projects section */
+  margin: 0 auto; /* NEW: Center horizontally */
   padding: 1rem;
   margin-bottom: 1rem;
   line-height: 1.6;
@@ -49,4 +52,25 @@
 
 .contact-email:hover {
   color: #005582;
+}
+
+/* NEW: Responsive adjustments */
+@media (max-width: 768px) { /* NEW */
+  .contact-heading { /* NEW */
+    font-size: 3rem; /* NEW */
+  }
+
+  .contact-description { /* NEW */
+    font-size: 1rem; /* NEW */
+    padding: 1rem; /* NEW */
+  }
+
+  .contact-header-line { /* NEW */
+    width: 320px; /* NEW */
+    left: calc(10% - 53px); /* NEW */
+  }
+
+  .contact-email { /* NEW */
+    font-size: 1rem; /* NEW */
+  }
 }
