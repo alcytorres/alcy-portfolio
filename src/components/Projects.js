@@ -11,19 +11,19 @@ import travelLog from "../assets/travel-log.png";
 import pureHealthImage from "../assets/pure-health.png";
 
 // NEW: Import the images for the Movies Watchlist carousel
-import movies1 from "../assets/movies1.png"; // NEW
-import movies2 from "../assets/movies2.png"; // NEW
-import movies4 from "../assets/movies4.png"; // NEW
+import movies1 from "../assets/movies1.png";
+import movies2 from "../assets/movies2.png";
+import movies4 from "../assets/movies4.png";
 
 function Projects() {
   // NEW: Initialize carousel indices for projects with carousels
-  const [carouselIndices, setCarouselIndices] = useState({}); // NEW
+  const [carouselIndices, setCarouselIndices] = useState({});
 
   // Images array for the Travel Log carousel
   const travelLogImages = [travelLogMap, travelLog, travelLogView];
 
   // NEW: Images array for the Movies Watchlist carousel
-  const moviesImages = [movies1, movies2, movies4]; // NEW
+  const moviesImages = [movies1, movies2, movies4];
 
   // Updated project list
   const projectList = [
@@ -42,11 +42,8 @@ function Projects() {
           </p>
         </div>
       ),
-      // REMOVE: Remove 'video' and 'sideBySide' properties
-      // video: "https://www.youtube.com/embed/placeholder_link", // REMOVE
-      // sideBySide: true, // REMOVE
-      carousel: true, // NEW: Use carousel
-      images: moviesImages, // NEW
+      carousel: true, // Use carousel
+      images: moviesImages,
       githubLink: "https://github.com/alcytorres/watchlist-movies-api",
     },
     {
@@ -70,7 +67,8 @@ function Projects() {
       githubLink: "https://github.com/alcytorres/travel-log-backend.git",
     },
     {
-      title: "PureHealth (Launching in 2025)",
+      title: "PureHealth",
+      subTitle: " (Launching in 2025)", // NEW: Subtitle for PureHealth
       description: (
         <div className="project-description">
           <p>
@@ -114,7 +112,7 @@ function Projects() {
                 ? "movies-watchlist-card"
                 : project.title === "Travel Log"
                 ? "travel-log-card"
-                : project.title === "PureHealth (Launching in 2025)"
+                : project.title === "PureHealth"
                 ? "purehealth-card"
                 : ""
             }`}
@@ -142,7 +140,7 @@ function Projects() {
                     className="carousel-image"
                   />
                   {/* NEW: Arrows inside the carousel-container, beneath the image */}
-                  <div className="carousel-controls"> {/* NEW */}
+                  <div className="carousel-controls">
                     <button
                       className="carousel-arrow left-arrow"
                       onClick={() => {
@@ -206,13 +204,21 @@ function Projects() {
                   />
                 </div>
                 <div className="project-info purehealth-info">
-                  <h3 className="project-title">{project.title}</h3>
+                  <h3 className="project-title">
+                    {project.title}
+                    {project.subTitle && (
+                      <span className="project-subtitle">{project.subTitle}</span> // NEW
+                    )}
+                  </h3>
                   {project.description}
                 </div>
               </div>
             ) : (
               <>
                 <h3 className="project-title">{project.title}</h3>
+                {project.subTitle && (
+                  <span className="project-subtitle">{project.subTitle}</span> // NEW
+                )}
                 <p className="project-description">{project.description}</p>
               </>
             )}
