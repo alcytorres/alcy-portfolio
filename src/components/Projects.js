@@ -10,6 +10,11 @@ import travelLog from "../assets/travel-log.png";
 // Import the PureHealth image
 import pureHealthImage from "../assets/pure-health.png";
 
+// Import the PureHealth carousel images - you'll need to add these files to your assets folder
+import pureHealth1 from "../assets/purehealth1.png";
+import pureHealth2 from "../assets/purehealth2.png";
+import pureHealth3 from "../assets/purehealth3.png";
+
 // Import the images for the Movies Watchlist carousel
 import movies1 from "../assets/movies1.png";
 import movies2 from "../assets/movies2.png";
@@ -24,6 +29,9 @@ function Projects() {
 
   // Images array for the Movies Watchlist carousel
   const moviesImages = [movies1, movies2, movies4];
+
+  // Images array for the PureHealth carousel
+  const pureHealthImages = [pureHealth1, pureHealth2, pureHealth3];
 
   // Updated project list
   const projectList = [
@@ -57,8 +65,8 @@ function Projects() {
           </p>
           <br />
           <p>
-            It’s a simple yet inspiring tool to celebrate memories, reflect on
-            experiences, and stay excited for what’s next in my travels.
+            It's a simple yet inspiring tool to celebrate memories, reflect on
+            experiences, and stay excited for what's next in my travels.
           </p>
         </div>
       ),
@@ -68,21 +76,20 @@ function Projects() {
     },
     {
       title: "PureHealth",
-      subTitle: " (Launching in 2025)", // Subtitle for PureHealth
       description: (
         <div className="project-description">
           <p>
-            PureHealth is going to be a centralized app that aggregates and syncs all your health and fitness data from various apps like Health, Strava, Nike Run Club, and more into one seamless platform.
+            The PureHealth app is a user-friendly web application designed to track and visualize personal health metrics, such as steps, sleep, hydration, and calorie intake.
           </p>
           <br />
           <p>
-            It will empower users to monitor their wellness journey holistically, offering actionable insights and personalized trends in an intuitive interface.
+          Featuring an interactive calendar view, intuitive date filtering, and detailed statistical insights, PureHealth helps users effectively monitor and achieve their wellness goals. The app integrates a machine learning model to forecast weekly step counts, providing predictions for past, current, and upcoming weeks, while continuously tracking prediction accuracy.
           </p>
         </div>
       ),
-      image: pureHealthImage,
-      carousel: false,
-      singleImage: true,
+      carousel: true,
+      images: pureHealthImages,
+      githubLink: "https://github.com/alcytorres/pure_health",
     },
   ];
 
@@ -199,33 +206,9 @@ function Projects() {
                   </div>
                 </div>
               </div>
-            ) : project.singleImage ? (
-              <div className="carousel-and-info">
-                <div className="carousel-container purehealth-carousel">
-                  <img
-                    src={project.image}
-                    alt={`${project.title}`}
-                    className="carousel-image purehealth-carousel-image" /* NEW */
-                  />
-                </div>
-                <div className="project-content-container">
-                  <div className="project-info purehealth-info">
-                    <h3 className="project-title">
-                      {project.title}
-                      {project.subTitle && (
-                        <span className="project-subtitle">{project.subTitle}</span>
-                      )}
-                    </h3>
-                    {project.description}
-                  </div>
-                </div>
-              </div>
             ) : (
               <>
                 <h3 className="project-title">{project.title}</h3>
-                {project.subTitle && (
-                  <span className="project-subtitle">{project.subTitle}</span>
-                )}
                 <p className="project-description">{project.description}</p>
               </>
             )}
