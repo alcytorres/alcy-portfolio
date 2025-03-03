@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/alcy-portfolio/static/css/main.1c9a2e93.css",
-    "main.js": "/alcy-portfolio/static/js/main.80a020d3.js",
+    "main.js": "/alcy-portfolio/static/js/main.90c62c83.js",
     "static/js/511.48f77360.chunk.js": "/alcy-portfolio/static/js/511.48f77360.chunk.js",
     "static/media/movies1.png": "/alcy-portfolio/static/media/movies1.5aaca740da6cb123d868.png",
     "static/media/movies2.png": "/alcy-portfolio/static/media/movies2.ea3a2fb20d856be77dfb.png",
@@ -11,14 +11,17 @@
     "static/media/travel-log-map.png": "/alcy-portfolio/static/media/travel-log-map.503d56717410f0c3d47b.png",
     "static/media/travel-log-view.png": "/alcy-portfolio/static/media/travel-log-view.05fd989f7c3af081fd97.png",
     "static/media/movies4.png": "/alcy-portfolio/static/media/movies4.6ec7287c20a5133eaebd.png",
+    "static/media/purehealth1.png": "/alcy-portfolio/static/media/purehealth1.b1b50d2667609f6b9f58.png",
+    "static/media/purehealth2.png": "/alcy-portfolio/static/media/purehealth2.8c320006d5d484e70cff.png",
     "static/media/alcy-logo.png": "/alcy-portfolio/static/media/alcy-logo.d021b9710812938e040e.png",
+    "static/media/purehealth3.png": "/alcy-portfolio/static/media/purehealth3.d5f4c3caa5e4ab28bb7a.png",
     "index.html": "/alcy-portfolio/index.html",
     "main.1c9a2e93.css.map": "/alcy-portfolio/static/css/main.1c9a2e93.css.map",
-    "main.80a020d3.js.map": "/alcy-portfolio/static/js/main.80a020d3.js.map",
+    "main.90c62c83.js.map": "/alcy-portfolio/static/js/main.90c62c83.js.map",
     "511.48f77360.chunk.js.map": "/alcy-portfolio/static/js/511.48f77360.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1c9a2e93.css",
-    "static/js/main.80a020d3.js"
+    "static/js/main.90c62c83.js"
   ]
 }
