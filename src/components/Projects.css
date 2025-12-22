@@ -71,6 +71,7 @@
 
 /* Individual Project Cards */
 .movies-watchlist-card,
+.sentiment-analyzer-card,
 .travel-log-card,
 .purehealth-card {
   margin: 2rem auto;
@@ -115,6 +116,27 @@
 }
 
 .movies-watchlist-button {
+  /* Adjust button styles if needed */
+}
+
+/* NEW: Company Sentiment Analyzer Styles */
+.sentiment-analyzer-carousel-container {
+  /* Your styles here */
+}
+
+.sentiment-analyzer-carousel-image {
+  /* Your styles here */
+}
+
+.sentiment-analyzer-title {
+  /* You can adjust font-size, color, etc. */
+}
+
+.sentiment-analyzer-description {
+  /* Adjust description styles if needed */
+}
+
+.sentiment-analyzer-button {
   /* Adjust button styles if needed */
 }
 
@@ -323,6 +345,11 @@
   .synthwave-button {
     font-size: 1rem;
     padding: 8px 16px;
+  }
+
+  /* NEW: Add margin-top to Company Sentiment Analyzer carousel-container */
+  .sentiment-analyzer-carousel { 
+    margin-top: 50px; 
   }
 
   /* Add margin-top to Travel Log carousel-container */

@@ -18,7 +18,13 @@ import pureHealth3 from "../assets/purehealth3.png";
 // Import the images for the Movies Watchlist carousel
 import movies1 from "../assets/movies1.png";
 import movies2 from "../assets/movies2.png";
+import movies3 from "../assets/movies3.png";
 import movies4 from "../assets/movies4.png";
+import movies5 from "../assets/movies5.png";
+
+// Import the images for the Company Sentiment Analyzer carousel
+import sentiment1 from "../assets/sentiment1.png";
+import sentiment2 from "../assets/sentiment2.png";
 
 function Projects() {
   // Initialize carousel indices for projects with carousels
@@ -28,31 +34,49 @@ function Projects() {
   const travelLogImages = [travelLogMap, travelLog, travelLogView];
 
   // Images array for the Movies Watchlist carousel
-  const moviesImages = [movies1, movies2, movies4];
+  const moviesImages = [movies1, movies2, movies3, movies4, movies5];
+
+  // Images array for the Company Sentiment Analyzer carousel
+  const sentimentImages = [sentiment1, sentiment2];
 
   // Images array for the PureHealth carousel
   const pureHealthImages = [pureHealth1, pureHealth2, pureHealth3];
 
-  // Updated project list
+  // Updated project list:
   const projectList = [
     {
       title: "Movies Watchlist",
       description: (
         <div className="project-description">
           <p>
-            The Watchlist Movies app is a user-friendly tool for tracking
-            favorite films, planning future viewings, and discovering new movies.
+            A full-stack app that lets you sign up, search for movies, see where they’re streaming, and build your own watchlist and favorites collection.
           </p>
           <br />
           <p>
-            By providing detailed information and streaming availability through
-            the TMDb API, it ensures users always know where to watch.
+            It pulls real-time movie data from TMDb database and uses the OpenAI API to analyze your favorite movies and suggest new ones, delivering personalized recommendations with thoughtful explanations for a smart, Netflix-like discovery experience.
           </p>
         </div>
       ),
       carousel: true, // Use carousel
       images: moviesImages,
       githubLink: "https://github.com/alcytorres/watchlist-movies-api",
+    },
+    {
+      title: "Company Sentiment Analyzer",
+      description: (
+        <div className="project-description">
+          <p>
+            An AI-powered tool that lets you upload a company's earnings reports and ask questions about them.
+          </p>
+          <br />
+          <p>
+            It intelligently searches through the documents, analyzes the financial tone (bullish, bearish, or neutral), and generates clear answers with explanations and direct references back to the original pages, all powered by advanced AI models running locally on your machine.
+          </p>
+        </div>
+      ),
+      carousel: true,
+      images: sentimentImages,
+      githubLink: "https://github.com/alcytorres/sentiment_analysis",
     },
     {
       title: "Travel Log",
@@ -120,6 +144,8 @@ function Projects() {
             className={`project-card ${
               project.title === "Movies Watchlist"
                 ? "movies-watchlist-card"
+                : project.title === "Company Sentiment Analyzer"
+                ? "sentiment-analyzer-card"
                 : project.title === "Travel Log"
                 ? "travel-log-card"
                 : project.title === "PureHealth"
@@ -135,6 +161,8 @@ function Projects() {
                   className={`carousel-container ${
                     project.title === "Movies Watchlist"
                       ? "movies-watchlist-carousel"
+                      : project.title === "Company Sentiment Analyzer"
+                      ? "sentiment-analyzer-carousel"
                       : project.title === "Travel Log"
                       ? "travel-log-carousel"
                       : ""
@@ -186,6 +214,8 @@ function Projects() {
                     className={`project-info ${
                       project.title === "Movies Watchlist"
                         ? "movies-watchlist-info"
+                        : project.title === "Company Sentiment Analyzer"
+                        ? "sentiment-analyzer-info"
                         : project.title === "Travel Log"
                         ? "travel-log-info"
                         : ""

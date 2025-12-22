@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import './Intro.css'; // Import intro.css for styling
 
 function Intro() {
@@ -32,6 +32,12 @@ function Intro() {
             className="social-icon"
           >
             <FaGithub />
+          </a>
+          <a
+            href="mailto:alcy.atorres@gmail.com"
+            className="social-icon"
+          >
+            <FaEnvelope />
           </a>
         </div>
       </div>

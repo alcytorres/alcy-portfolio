@@ -28,7 +28,7 @@ function About() {
             My expertise spans various domains of software engineering, including backend and frontend development, UI/UX design, database management, and web development. This diverse skill set enables me to approach projects holistically, ensuring both robust functionality and an intuitive user experience.
           </p>
           <p className="staggered-text">
-            Currently, at Medpod, I lead the front-end overhaul of a video platform serving over 10,000 users. This role has sharpened my problem-solving abilities, strengthened my leadership in complex projects, and enhanced my collaboration with cross-functional teams.
+            At Medpod, I led the front-end overhaul of a video platform serving over 10,000 users. This role sharpened my problem-solving abilities, strengthened my leadership in complex projects, and enhanced my collaboration with cross-functional teams.
           </p>
           <p className="staggered-text">
             Outside of work, I stay energized through various activities. I’m passionate about fútbol, enjoy the thrill of off-road dirt biking, love hiking through scenic trails, and relish hitting the slopes on my snowboard. I also cherish quality time with family and friends.
