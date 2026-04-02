@@ -70,6 +70,7 @@
 }
 
 /* Individual Project Cards */
+.andean-farm-card,
 .movies-watchlist-card,
 .sentiment-analyzer-card,
 .travel-log-card,
@@ -97,6 +98,37 @@
 }
 
 /* Specific styles for each project */
+
+/* Andean Farm Simulator */
+.andean-farm-doc-link {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.andean-farm-doc-link:hover {
+  color: #1d4ed8;
+}
+
+.andean-farm-carousel-container {
+  /* Your styles here */
+}
+
+.andean-farm-carousel-image {
+  /* Your styles here */
+}
+
+.andean-farm-title {
+  /* You can adjust font-size, color, etc. */
+}
+
+.andean-farm-description {
+  /* Adjust description styles if needed */
+}
+
+.andean-farm-button {
+  /* Adjust button styles if needed */
+}
 
 /* Movies Watchlist Styles */
 .movies-watchlist-carousel-container {
@@ -345,6 +377,10 @@
   .synthwave-button {
     font-size: 1rem;
     padding: 8px 16px;
+  }
+
+  .andean-farm-carousel {
+    margin-top: 50px;
   }
 
   /* NEW: Add margin-top to Company Sentiment Analyzer carousel-container */

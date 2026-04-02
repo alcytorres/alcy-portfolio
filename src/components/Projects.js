@@ -15,6 +15,12 @@ import pureHealth1 from "../assets/purehealth1.png";
 import pureHealth2 from "../assets/purehealth2.png";
 import pureHealth3 from "../assets/purehealth3.png";
 
+// Andean Farm Simulator carousel (SVG placeholders — swap for PNGs and update imports when ready)
+import andeanFarm1 from "../assets/andean-farm-1.png";
+import andeanFarm2 from "../assets/andean-farm-2.png";
+import andeanFarm3 from "../assets/andean-farm-3.png";
+import andeanFarm4 from "../assets/andean-farm-4.png";
+
 // Import the images for the Movies Watchlist carousel
 import movies1 from "../assets/movies1.png";
 import movies2 from "../assets/movies2.png";
@@ -33,6 +39,9 @@ function Projects() {
   // Images array for the Travel Log carousel
   const travelLogImages = [travelLogMap, travelLog, travelLogView];
 
+  // Images array for the Andean Farm Simulator carousel
+  const andeanFarmImages = [andeanFarm1, andeanFarm2, andeanFarm3, andeanFarm4];
+
   // Images array for the Movies Watchlist carousel
   const moviesImages = [movies1, movies2, movies3, movies4, movies5];
 
@@ -44,6 +53,32 @@ function Projects() {
 
   // Updated project list:
   const projectList = [
+    {
+      title: "Andean Farm Simulator",
+      description: (
+        <div className="project-description">
+          <p>
+            A scenario-based planning tool for a mixed dairy and crop farm in the Ecuadorian highlands. It models land use, herd size, production, costs, and weather risk so you can see which configuration yields the strongest profit under real constraints.
+          </p>
+          <br />
+          <p>
+            It includes a farm dashboard, a live scenario builder with base, bull, and bear cases, side-by-side scenario comparison with charts, risk cases, and a final{" "}
+            <a
+              href="https://docs.google.com/document/d/1VH3erwml7v2Mu_QGsuhO5EJIvp6NczgizlOJlu8EtsA/edit?tab=t.0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="andean-farm-doc-link"
+            >
+              recommendation
+            </a>
+            .
+          </p>
+        </div>
+      ),
+      carousel: true,
+      images: andeanFarmImages,
+      githubLink: "https://github.com/alcytorres/andean_farm_simulator",
+    },
     {
       title: "Movies Watchlist",
       description: (
@@ -142,7 +177,9 @@ function Projects() {
           <div
             key={index}
             className={`project-card ${
-              project.title === "Movies Watchlist"
+              project.title === "Andean Farm Simulator"
+                ? "andean-farm-card"
+                : project.title === "Movies Watchlist"
                 ? "movies-watchlist-card"
                 : project.title === "Company Sentiment Analyzer"
                 ? "sentiment-analyzer-card"
@@ -159,7 +196,9 @@ function Projects() {
                 {/* Carousel Container */}
                 <div
                   className={`carousel-container ${
-                    project.title === "Movies Watchlist"
+                    project.title === "Andean Farm Simulator"
+                      ? "andean-farm-carousel"
+                      : project.title === "Movies Watchlist"
                       ? "movies-watchlist-carousel"
                       : project.title === "Company Sentiment Analyzer"
                       ? "sentiment-analyzer-carousel"
@@ -212,7 +251,9 @@ function Projects() {
                 <div className="project-content-container">
                   <div
                     className={`project-info ${
-                      project.title === "Movies Watchlist"
+                      project.title === "Andean Farm Simulator"
+                        ? "andean-farm-info"
+                        : project.title === "Movies Watchlist"
                         ? "movies-watchlist-info"
                         : project.title === "Company Sentiment Analyzer"
                         ? "sentiment-analyzer-info"
