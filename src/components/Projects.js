@@ -28,7 +28,7 @@ import movies3 from "../assets/movies3.png";
 import movies4 from "../assets/movies4.png";
 import movies5 from "../assets/movies5.png";
 
-// Import the images for the Company Sentiment Analyzer carousel
+// Import the images for the Financial Sentiment Analyzer carousel
 import sentiment1 from "../assets/sentiment1.png";
 import sentiment2 from "../assets/sentiment2.png";
 
@@ -45,7 +45,7 @@ function Projects() {
   // Images array for the Movies Watchlist carousel
   const moviesImages = [movies1, movies2, movies3, movies4, movies5];
 
-  // Images array for the Company Sentiment Analyzer carousel
+  // Images array for the Financial Sentiment Analyzer carousel
   const sentimentImages = [sentiment1, sentiment2];
 
   // Images array for the PureHealth carousel
@@ -97,15 +97,15 @@ function Projects() {
       githubLink: "https://github.com/alcytorres/watchlist-movies-api",
     },
     {
-      title: "Company Sentiment Analyzer",
+      title: "Financial Sentiment Analyzer",
       description: (
         <div className="project-description">
           <p>
-            An AI-powered tool that lets you upload a company's earnings reports and ask questions about them.
+            An AI-powered tool that lets you paste financial articles, research notes, or earnings call snippets and ask questions about them.
           </p>
           <br />
           <p>
-            It intelligently searches through the documents, analyzes the financial tone (bullish, bearish, or neutral), and generates clear answers with explanations and direct references back to the original pages, all powered by advanced AI models running locally on your machine.
+            It searches through your text to find the most relevant passages. It then generates a clear answer with direct citations back to the source and analyzes the financial tone, telling you whether the evidence reads as bullish, bearish, or neutral. All of this is powered by AI models running locally on your machine.
           </p>
         </div>
       ),
@@ -181,8 +181,8 @@ function Projects() {
                 ? "andean-farm-card"
                 : project.title === "Movies Watchlist"
                 ? "movies-watchlist-card"
-                : project.title === "Company Sentiment Analyzer"
-                ? "sentiment-analyzer-card"
+                : project.title === "Financial Sentiment Analyzer"
+                ? "financial-sentiment-analyzer-card"
                 : project.title === "Travel Log"
                 ? "travel-log-card"
                 : project.title === "PureHealth"
@@ -200,8 +200,8 @@ function Projects() {
                       ? "andean-farm-carousel"
                       : project.title === "Movies Watchlist"
                       ? "movies-watchlist-carousel"
-                      : project.title === "Company Sentiment Analyzer"
-                      ? "sentiment-analyzer-carousel"
+                      : project.title === "Financial Sentiment Analyzer"
+                      ? "financial-sentiment-analyzer-carousel"
                       : project.title === "Travel Log"
                       ? "travel-log-carousel"
                       : ""
@@ -255,8 +255,8 @@ function Projects() {
                         ? "andean-farm-info"
                         : project.title === "Movies Watchlist"
                         ? "movies-watchlist-info"
-                        : project.title === "Company Sentiment Analyzer"
-                        ? "sentiment-analyzer-info"
+                        : project.title === "Financial Sentiment Analyzer"
+                        ? "financial-sentiment-analyzer-info"
                         : project.title === "Travel Log"
                         ? "travel-log-info"
                         : ""

@@ -72,7 +72,7 @@
 /* Individual Project Cards */
 .andean-farm-card,
 .movies-watchlist-card,
-.sentiment-analyzer-card,
+.financial-sentiment-analyzer-card,
 .travel-log-card,
 .purehealth-card {
   margin: 2rem auto;
@@ -151,24 +151,24 @@
   /* Adjust button styles if needed */
 }
 
-/* NEW: Company Sentiment Analyzer Styles */
-.sentiment-analyzer-carousel-container {
+/* Financial Sentiment Analyzer */
+.financial-sentiment-analyzer-carousel-container {
   /* Your styles here */
 }
 
-.sentiment-analyzer-carousel-image {
+.financial-sentiment-analyzer-carousel-image {
   /* Your styles here */
 }
 
-.sentiment-analyzer-title {
+.financial-sentiment-analyzer-title {
   /* You can adjust font-size, color, etc. */
 }
 
-.sentiment-analyzer-description {
+.financial-sentiment-analyzer-description {
   /* Adjust description styles if needed */
 }
 
-.sentiment-analyzer-button {
+.financial-sentiment-analyzer-button {
   /* Adjust button styles if needed */
 }
 
@@ -383,8 +383,8 @@
     margin-top: 50px;
   }
 
-  /* NEW: Add margin-top to Company Sentiment Analyzer carousel-container */
-  .sentiment-analyzer-carousel { 
+  /* Financial Sentiment Analyzer carousel on small screens */
+  .financial-sentiment-analyzer-carousel { 
     margin-top: 50px; 
   }
 
