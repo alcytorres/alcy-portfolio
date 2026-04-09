@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/alcy-portfolio/static/css/main.3f627b1d.css",
-    "main.js": "/alcy-portfolio/static/js/main.43857af3.js",
+    "main.js": "/alcy-portfolio/static/js/main.88e736ef.js",
     "static/js/511.48f77360.chunk.js": "/alcy-portfolio/static/js/511.48f77360.chunk.js",
     "static/media/movies1.png": "/alcy-portfolio/static/media/movies1.5aaca740da6cb123d868.png",
     "static/media/travel-log.png": "/alcy-portfolio/static/media/travel-log.1e29b636a023118e985d.png",
@@ -25,11 +25,11 @@
     "static/media/andean-farm-3.png": "/alcy-portfolio/static/media/andean-farm-3.35b2564c289d09d11410.png",
     "index.html": "/alcy-portfolio/index.html",
     "main.3f627b1d.css.map": "/alcy-portfolio/static/css/main.3f627b1d.css.map",
-    "main.43857af3.js.map": "/alcy-portfolio/static/js/main.43857af3.js.map",
+    "main.88e736ef.js.map": "/alcy-portfolio/static/js/main.88e736ef.js.map",
     "511.48f77360.chunk.js.map": "/alcy-portfolio/static/js/511.48f77360.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3f627b1d.css",
-    "static/js/main.43857af3.js"
+    "static/js/main.88e736ef.js"
   ]
 }
