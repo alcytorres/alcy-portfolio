@@ -62,14 +62,14 @@ function Projects() {
           </p>
           <br />
           <p>
-            It includes a farm dashboard, a live scenario builder with base, bull, and bear cases, side-by-side scenario comparison with charts, risk cases, and a final{" "}
+            It includes a farm dashboard, a live scenario builder with base/bull/bear projections, side-by-side comparisons with charts, risk cases, and a final recommendation. {" "}
             <a
-              href="https://docs.google.com/document/d/1VH3erwml7v2Mu_QGsuhO5EJIvp6NczgizlOJlu8EtsA/edit?tab=t.0"
+              href="https://docs.google.com/document/d/1yGW4azk0sb6uLwir5yvu0JsYctBFCGi41uoaaLFxz_M/edit?tab=t.0"
               target="_blank"
               rel="noopener noreferrer"
               className="andean-farm-doc-link"
             >
-              recommendation
+              Read more about the project here
             </a>
             .
           </p>
