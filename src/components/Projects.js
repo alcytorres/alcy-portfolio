@@ -21,16 +21,11 @@ import andeanFarm2 from "../assets/andean-farm-2.png";
 import andeanFarm3 from "../assets/andean-farm-3.png";
 import andeanFarm4 from "../assets/andean-farm-4.png";
 
-// Import the images for the Movies Watchlist carousel
+// Import the image for Movies Watchlist
 import movies1 from "../assets/movies1.png";
-import movies2 from "../assets/movies2.png";
-import movies3 from "../assets/movies3.png";
-import movies4 from "../assets/movies4.png";
-import movies5 from "../assets/movies5.png";
 
-// Import the images for the Financial Sentiment Analyzer carousel
-import sentiment1 from "../assets/sentiment1.png";
-import sentiment2 from "../assets/sentiment2.png";
+// Import the image for Financial Sentiment Analyzer
+import financialSentiment1 from "../assets/financial-sentiment1.png";
 
 function Projects() {
   // Initialize carousel indices for projects with carousels
@@ -42,11 +37,11 @@ function Projects() {
   // Images array for the Andean Farm Simulator carousel
   const andeanFarmImages = [andeanFarm1, andeanFarm2, andeanFarm3, andeanFarm4];
 
-  // Images array for the Movies Watchlist carousel
-  const moviesImages = [movies1, movies2, movies3, movies4, movies5];
+  // Image for Movies Watchlist
+  const moviesImages = [movies1];
 
-  // Images array for the Financial Sentiment Analyzer carousel
-  const sentimentImages = [sentiment1, sentiment2];
+  // Image for Financial Sentiment Analyzer
+  const sentimentImages = [financialSentiment1];
 
   // Images array for the PureHealth carousel
   const pureHealthImages = [pureHealth1, pureHealth2, pureHealth3];
@@ -216,36 +211,38 @@ function Projects() {
                     }`}
                     className="carousel-image"
                   />
-                  {/* Arrows inside the carousel-container, beneath the image */}
-                  <div className="carousel-controls">
-                    <button
-                      className="carousel-arrow left-arrow"
-                      onClick={() => {
-                        const newIndex =
-                          (carouselIndices[project.title] - 1 + project.images.length) %
-                          project.images.length;
-                        setCarouselIndices({
-                          ...carouselIndices,
-                          [project.title]: newIndex,
-                        });
-                      }}
-                    >
-                      &#8249;
-                    </button>
-                    <button
-                      className="carousel-arrow right-arrow"
-                      onClick={() => {
-                        const newIndex =
-                          (carouselIndices[project.title] + 1) % project.images.length;
-                        setCarouselIndices({
-                          ...carouselIndices,
-                          [project.title]: newIndex,
-                        });
-                      }}
-                    >
-                      &#8250;
-                    </button>
-                  </div>
+                  {project.images.length > 1 && (
+                    <div className="carousel-controls">
+                      <button
+                        className="carousel-arrow left-arrow"
+                        onClick={() => {
+                          const newIndex =
+                            (carouselIndices[project.title] - 1 + project.images.length) %
+                            project.images.length;
+                          setCarouselIndices({
+                            ...carouselIndices,
+                            [project.title]: newIndex,
+                          });
+                        }}
+                      >
+                        &#8249;
+                      </button>
+                      <button
+                        className="carousel-arrow right-arrow"
+                        onClick={() => {
+                          const newIndex =
+                            (carouselIndices[project.title] + 1) % project.images.length;
+                          setCarouselIndices({
+                            ...carouselIndices,
+                            [project.title]: newIndex,
+                          });
+                        }}
+                      >
+                        &#8250;
+                      </button>
+                    </div>
+                  )}
+
                 </div>
                 {/* Project Info */}
                 <div className="project-content-container">
