@@ -45,11 +45,11 @@ function Projects() {
       description: (
         <div className="project-description">
           <p>
-            A scenario-based planning tool for a mixed dairy and crop farm in the Ecuadorian highlands. It models land use, herd size, production, costs, and weather risk so you can see which configuration yields the strongest profit under real constraints.
+            A profit simulator for my family’s mixed dairy and broccoli farm in the Ecuadorian highlands. After a land sale left fewer acres, it helps compare how to allocate what’s left under real weather and price risk.
           </p>
           <br />
           <p>
-            It includes a farm dashboard, a live scenario builder with base/bull/bear projections, side-by-side comparisons with charts, risk cases, and a final recommendation. {" "}
+            You can adjust land, herd, prices, and weather assumptions, see base/bull/bear outcomes update live, save and compare scenarios with charts, and get a recommended allocation.{" "}
             <a
               href="https://docs.google.com/document/d/1yGW4azk0sb6uLwir5yvu0JsYctBFCGi41uoaaLFxz_M/edit?tab=t.0"
               target="_blank"
@@ -71,11 +71,11 @@ function Projects() {
       description: (
         <div className="project-description">
           <p>
-            A full-stack app that lets you sign up, search for movies, see where they’re streaming, and build your own watchlist and favorites collection.
+            A full-stack movie app where you can search films, see where to stream them, and build a personal watchlist and favorites list.
           </p>
           <br />
           <p>
-            It pulls real-time movie data from TMDb database and uses the OpenAI API to analyze your favorite movies and suggest new ones, delivering personalized recommendations with thoughtful explanations for a smart, Netflix-like discovery experience.
+            It uses TMDb for movie and streaming data, and OpenAI to recommend similar films from your favorites with short explanations for why they fit.
           </p>
         </div>
       ),
@@ -88,11 +88,11 @@ function Projects() {
       description: (
         <div className="project-description">
           <p>
-            An AI-powered tool that lets you paste financial articles, research notes, or earnings call snippets and ask questions about them.
+            A local RAG app for financial text. Paste an article, earnings call, or research note, ask a question, and get the exact passages that answer it, complete with citations and match scores.
           </p>
           <br />
           <p>
-            It searches through your text to find the most relevant passages. It then generates a clear answer with direct citations back to the source and analyzes the financial tone, telling you whether the evidence reads as bullish, bearish, or neutral. All of this is powered by AI models running locally on your machine.
+            FinBERT then scores each passage as bullish, bearish, or neutral. Everything runs on your machine, so no external AI APIs or keys are required.
           </p>
         </div>
       ),
@@ -105,14 +105,11 @@ function Projects() {
       description: (
         <div className="project-description">
           <p>
-            A personalized app that lets me track past
-            adventures and plan future bucket list trips, creating a
-            visual collection of my journeys.
+            A personal app for tracking places I’ve been and places I want to go. Trips show up as pins on an interactive map, and I can click a pin to view details, edit them, or add new ones.
           </p>
           <br />
           <p>
-            It's a simple yet inspiring tool to celebrate memories, reflect on
-            experiences, and stay excited for what's next in my travels.
+            Blue pins mark past trips; red pins mark bucket-list destinations. Built with a Rails API and a React frontend using Leaflet maps.
           </p>
         </div>
       ),
@@ -125,11 +122,11 @@ function Projects() {
       description: (
         <div className="project-description">
           <p>
-            The PureHealth app is a user-friendly web application designed to track and visualize personal health metrics, such as steps, sleep, hydration, and calorie intake.
+            A personal health dashboard that charts steps, sleep, hydration, and calories from local CSV data, with a calendar view, date-range charts, and basic stats like averages and goal streaks.
           </p>
           <br />
           <p>
-          Featuring an interactive calendar view, intuitive date filtering, and detailed statistical insights, PureHealth helps users effectively monitor and achieve their wellness goals. The app integrates a machine learning model to forecast weekly step counts, providing predictions for past, current, and upcoming weeks, while continuously tracking prediction accuracy.
+            On the Steps view, a simple linear regression model estimates average steps for the prior, current, and next week and tracks prediction error as more data is added.
           </p>
         </div>
       ),
