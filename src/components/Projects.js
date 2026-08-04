@@ -7,19 +7,11 @@ import travelLogMap from "../assets/travel-log-map.png";
 import travelLogView from "../assets/travel-log-view.png";
 import travelLog from "../assets/travel-log.png";
 
-// Import the PureHealth image
-import pureHealthImage from "../assets/pure-health.png";
-
-// Import the PureHealth carousel images - you'll need to add these files to your assets folder
+// Import the image for PureHealth
 import pureHealth1 from "../assets/purehealth1.png";
-import pureHealth2 from "../assets/purehealth2.png";
-import pureHealth3 from "../assets/purehealth3.png";
 
-// Andean Farm Simulator carousel (SVG placeholders — swap for PNGs and update imports when ready)
+// Import the image for Andean Farm Simulator
 import andeanFarm1 from "../assets/andean-farm-1.png";
-import andeanFarm2 from "../assets/andean-farm-2.png";
-import andeanFarm3 from "../assets/andean-farm-3.png";
-import andeanFarm4 from "../assets/andean-farm-4.png";
 
 // Import the image for Movies Watchlist
 import movies1 from "../assets/movies1.png";
@@ -32,10 +24,10 @@ function Projects() {
   const [carouselIndices, setCarouselIndices] = useState({});
 
   // Images array for the Travel Log carousel
-  const travelLogImages = [travelLogMap, travelLog, travelLogView];
+  const travelLogImages = [travelLogView, travelLog, travelLogMap];
 
-  // Images array for the Andean Farm Simulator carousel
-  const andeanFarmImages = [andeanFarm1, andeanFarm2, andeanFarm3, andeanFarm4];
+  // Image for Andean Farm Simulator
+  const andeanFarmImages = [andeanFarm1];
 
   // Image for Movies Watchlist
   const moviesImages = [movies1];
@@ -43,8 +35,8 @@ function Projects() {
   // Image for Financial Sentiment Analyzer
   const sentimentImages = [financialSentiment1];
 
-  // Images array for the PureHealth carousel
-  const pureHealthImages = [pureHealth1, pureHealth2, pureHealth3];
+  // Image for PureHealth
+  const pureHealthImages = [pureHealth1];
 
   // Updated project list:
   const projectList = [
